@@ -1,273 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="assets/img/android-chrome-512x512.png" type="image/x-icon">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-   <link rel="stylesheet" href="style.css">
-   <title>Keerthana Devi Govindaraj | Full Stack Software Engineer</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!-- SEO -->
+   <meta
+      name="description"
+      content="Keerthana Devi Govindaraj - Full Stack Software Engineer specializing in Cloud, AI/ML, and scalable web applications."
+   />
+   <meta
+      name="keywords"
+      content="Full Stack Developer, Software Engineer, React Developer, Cloud Engineer, AI Engineer, Portfolio"
+   />
+   <meta name="author" content="Keerthana Devi Govindaraj" />
+
+   <!-- Open Graph -->
+   <meta property="og:title" content="Keerthana Devi Govindaraj | Portfolio" />
+   <meta property="og:description" content="Full Stack Software Engineer Portfolio" />
+   <meta property="og:type" content="website" />
+
+   <!-- Favicon -->
+   <link
+      rel="shortcut icon"
+      href="assets/img/android-chrome-512x512.png"
+      type="image/x-icon"
+   />
+
+   <!-- Remix Icons -->
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+   />
+
+   <!-- AOS Animation -->
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+   />
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="style.css" />
+
+   <title>
+      Keerthana Devi Govindaraj | Full Stack Engineer | AI & Cloud Developer
+   </title>
 </head>
+
 <body>
+
+   <!-- Background Animation -->
    <div class="bg-animation"></div>
 
-<!-- Header -->
-<header class="header">
-   <nav class="nav container">
-      <a href="index.html" class="nav__logo">KG</a>
-      <div class="nav__menu" id="nav-menu">
-         <ul class="nav__list">
-            <i class="ri-close-line nav__close" id="nav-close"></i>
-            <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
-            <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="work.html" class="nav__link">Projects</a></li>
-         </ul>
-      </div>
-      <div class="nav__actions">
-         <i class="ri-moon-line change-theme" id="theme-button"></i>
-         <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line"></i>
-         </div>
-      </div>
-   </nav>
-</header>
+   <!-- HEADER -->
+   <header class="header">
+      <nav class="nav container">
 
-   <!-- Hero Section -->
-   <section class="hero-section">
+         <a href="#home" class="nav__logo">KG</a>
+
+         <div class="nav__menu" id="nav-menu">
+
+            <ul class="nav__list">
+
+               <i class="ri-close-line nav__close" id="nav-close"></i>
+
+               <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">Home</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#skills" class="nav__link">Skills</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#experience" class="nav__link">Experience</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#projects" class="nav__link">Projects</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#contact" class="nav__link">Contact</a>
+               </li>
+
+            </ul>
+
+         </div>
+
+         <div class="nav__actions">
+
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+
+         </div>
+
+      </nav>
+   </header>
+
+   <!-- HERO -->
+   <section class="hero-section" id="home">
+
       <div class="container">
+
          <div class="hero-content">
-            <div class="hero-text">
+
+            <div class="hero-text" data-aos="fade-right">
+
                <div class="hero-badge">
                   <span class="badge-dot"></span>
-                  Available for opportunities
+                  Open to Software Engineering Opportunities
                </div>
+
                <h1 class="hero-title">
-                  Hi, I'm <span class="gradient-text">Keerthana Devi G</span>
+                  Hi, I'm
+                  <span class="gradient-text">
+                     Keerthana Devi G
+                  </span>
                </h1>
-               <h2 class="hero-subtitle">Full Stack Software Engineer</h2>
+
+               <h2 class="hero-subtitle">
+                  Full Stack Software Engineer
+               </h2>
+
                <p class="hero-description">
-   I'm a Graduate Student in Software Engineering Systems at Northeastern University, 
-   passionate about building scalable, user-centric applications. With a strong foundation 
-   in full-stack development and machine learning, I've worked on diverse projects ranging 
-   from query performance optimization to AI-powered healthcare solutions.
-</p>
-<p class="hero-description">
-   My experience spans from developing NLP pipelines and deep learning models to creating 
-   intuitive user interfaces and robust backend systems. I'm driven by the challenge of 
-   solving complex problems through elegant code and innovative solutions.
-</p>
+                  Graduate student in Software Engineering Systems at
+                  Northeastern University with experience building
+                  scalable full-stack applications, cloud-native systems,
+                  and AI-powered solutions.
+               </p>
+
+               <p class="hero-description">
+                  Passionate about solving complex engineering problems
+                  using modern web technologies, distributed systems,
+                  machine learning, and cloud infrastructure.
+               </p>
+
                <div class="hero-stats">
+
                   <div class="stat-item">
                      <span class="stat-number">4+</span>
                      <span class="stat-label">Projects</span>
                   </div>
+
                   <div class="stat-item">
                      <span class="stat-number">2</span>
                      <span class="stat-label">Publications</span>
                   </div>
+
+                  <div class="stat-item">
+                     <span class="stat-number">3+</span>
+                     <span class="stat-label">Internships</span>
+                  </div>
+
                </div>
+
                <div class="hero-buttons">
-                  <a href="work.html" class="btn btn-primary">
+
+                  <a href="#projects" class="btn btn-primary">
                      <span>View Projects</span>
                      <i class="ri-arrow-right-line"></i>
                   </a>
-                  <a href="Keerthana Devi Govindaraj Resume.pdf" download class="btn btn-secondary">
-                     <i class="ri-download-line"></i>
-                     <span>Download CV</span>
+
+                  <a
+                     href="Keerthana_Devi_Govindaraj_Resume-SDE.pdf"
+                     target="_blank"
+                     class="btn btn-secondary"
+                  >
+                     <i class="ri-file-download-line"></i>
+                     <span>View Resume</span>
                   </a>
+
                </div>
+
                <div class="social-links">
-                  <!-- <a href="https://github.com/Keerthanadevi28" target="_blank" class="social-link" title="GitHub">
-                     <i class="ri-github-fill"></i>
-                  </a> -->
-                  <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" class="social-link" title="GitHub">
+
+                  <a
+                     href="https://github.com/KeerthanaDeviGovindaraj"
+                     target="_blank"
+                     class="social-link"
+                  >
                      <i class="ri-github-fill"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" class="social-link" title="LinkedIn">
+
+                  <a
+                     href="https://www.linkedin.com/in/keerthanadevig28062002/"
+                     target="_blank"
+                     class="social-link"
+                  >
                      <i class="ri-linkedin-box-fill"></i>
                   </a>
+
+                  <a
+                     href="mailto:govindaraj.ke@northeastern.edu"
+                     class="social-link"
+                  >
+                     <i class="ri-mail-fill"></i>
+                  </a>
+
                </div>
+
             </div>
-            <div class="hero-visual">
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual" data-aos="fade-left">
+
                <div class="floating-card card-1">
                   <i class="ri-code-s-slash-line"></i>
                   <span>Full Stack</span>
                </div>
+
                <div class="floating-card card-2">
-                  <i class="ri-brain-line"></i>
-                  <span>ML/AI</span>
-               </div>
-               <div class="floating-card card-3">
-                  <i class="ri-database-2-line"></i>
-                  <span>Databases</span>
-               </div>
-               <div class="floating-card card-4">
                   <i class="ri-cloud-line"></i>
                   <span>Cloud</span>
                </div>
+
+               <div class="floating-card card-3">
+                  <i class="ri-brain-line"></i>
+                  <span>AI / ML</span>
+               </div>
+
+               <div class="floating-card card-4">
+                  <i class="ri-database-2-line"></i>
+                  <span>Databases</span>
+               </div>
+
             </div>
+
          </div>
+
       </div>
+
    </section>
 
-   <!-- Skills Section -->
-   <section class="skills-section">
+   <!-- SKILLS -->
+   <section class="skills-section" id="skills">
+
       <div class="container">
-         <h2 class="section-title">Tech Stack</h2>
+
+         <h2 class="section-title" data-aos="fade-up">
+            Technical Skills
+         </h2>
+
          <div class="skills-grid">
-            <div class="skill-category">
+
+            <div class="skill-category" data-aos="fade-up">
+
                <div class="category-icon">
                   <i class="ri-layout-line"></i>
                </div>
+
                <h3>Frontend</h3>
+
                <div class="skill-tags">
                   <span class="skill-tag">React.js</span>
+                  <span class="skill-tag">Next.js</span>
+                  <span class="skill-tag">Angular</span>
+                  <span class="skill-tag">Vue.js</span>
                   <span class="skill-tag">Redux</span>
-                  <span class="skill-tag">JavaScript</span>
                   <span class="skill-tag">TypeScript</span>
-                  <span class="skill-tag">HTML/CSS</span>
                </div>
+
             </div>
-            <div class="skill-category">
+
+            <div class="skill-category" data-aos="fade-up">
+
                <div class="category-icon">
                   <i class="ri-server-line"></i>
                </div>
+
                <h3>Backend</h3>
+
                <div class="skill-tags">
-                  <span class="skill-tag">Django</span>
                   <span class="skill-tag">Node.js</span>
                   <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">FastAPI</span>
+                  <span class="skill-tag">Django</span>
                   <span class="skill-tag">REST APIs</span>
-                  <span class="skill-tag">Java</span>
                </div>
+
             </div>
-            <div class="skill-category">
+
+            <div class="skill-category" data-aos="fade-up">
+
                <div class="category-icon">
-                  <i class="ri-database-2-line"></i>
+                  <i class="ri-cloud-line"></i>
                </div>
-               <h3>Database</h3>
+
+               <h3>Cloud & DevOps</h3>
+
                <div class="skill-tags">
-                  <span class="skill-tag">PostgreSQL</span>
-                  <span class="skill-tag">MySQL</span>
-                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">AWS</span>
+                  <span class="skill-tag">Terraform</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">GitHub Actions</span>
+                  <span class="skill-tag">CI/CD</span>
+                  <span class="skill-tag">Serverless</span>
                </div>
+
             </div>
-            <div class="skill-category">
+
+            <div class="skill-category" data-aos="fade-up">
+
                <div class="category-icon">
                   <i class="ri-brain-line"></i>
                </div>
-               <h3>ML/AI</h3>
+
+               <h3>AI / ML</h3>
+
                <div class="skill-tags">
                   <span class="skill-tag">TensorFlow</span>
                   <span class="skill-tag">PyTorch</span>
-                  <span class="skill-tag">Scikit-learn</span>
+                  <span class="skill-tag">Scikit-Learn</span>
                   <span class="skill-tag">OpenCV</span>
                   <span class="skill-tag">NLP</span>
                </div>
+
             </div>
+
          </div>
+
       </div>
+
    </section>
 
-   <!-- Featured Projects -->
-   <section class="featured-projects">
+   <!-- EXPERIENCE -->
+   <section class="experience-section" id="experience">
+
       <div class="container">
-         <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
-            <a href="work.html" class="view-all">
-               View All <i class="ri-arrow-right-line"></i>
-            </a>
-         </div>
-         <div class="projects-showcase">
-            <div class="project-card-large">
-               <div class="project-image-container">
-                  <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                           <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                           <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-                        </linearGradient>
-                     </defs>
-                     <rect width="100%" height="100%" fill="url(#grad1)" opacity="0.3"/>
-                     <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="20" font-weight="bold">ASD Detection</text>
-                  </svg>
-               </div>
-               <div class="project-content">
-                  <h3>Eye-Tracking ASD Diagnosis</h3>
-                  <p>Deep learning solution for early autism detection using CNNs and transfer learning. 20% accuracy improvement. IEEE Published.</p>
-                  <div class="project-tech">
-                     <span>CNN</span>
-                     <span>TensorFlow</span>
-                     <span>OpenCV</span>
-                  </div>
-                  <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL" target="_blank" class="project-link">
-                     View Project <i class="ri-arrow-right-line"></i>
-                  </a>
-               </div>
+
+         <h2 class="section-title" data-aos="fade-up">
+            Experience
+         </h2>
+
+         <div class="experience-container">
+
+            <div class="experience-card" data-aos="fade-right">
+
+               <h3>Full Stack Software Engineer Intern</h3>
+
+               <span>FITA Academy • Jan 2025 – Aug 2025</span>
+
+               <p>
+                  Built a complete student management platform with
+                  React.js, Next.js, Spring Boot, JWT authentication,
+                  and MongoDB. Designed scalable REST APIs and shared
+                  frontend component libraries.
+               </p>
+
             </div>
-            <div class="project-card-large">
-               <div class="project-image-container">
-                  <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                           <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                           <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
-                        </linearGradient>
-                     </defs>
-                     <rect width="100%" height="100%" fill="url(#grad2)" opacity="0.3"/>
-                     <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="20" font-weight="bold">Query Analyzer</text>
-                  </svg>
-               </div>
+
+            <div class="experience-card" data-aos="fade-left">
+
+               <h3>Machine Learning Intern</h3>
+
+               <span>Aican Automate • Jan 2023 – Mar 2023</span>
+
+               <p>
+                  Developed NLP pipelines using TF-IDF, N-grams,
+                  Logistic Regression, and Random Forest models
+                  achieving 87% precision for text classification.
+               </p>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </section>
+
+   <!-- PROJECTS -->
+   <section class="featured-projects" id="projects">
+
+      <div class="container">
+
+         <div class="section-header">
+
+            <h2 class="section-title">
+               Featured Projects
+            </h2>
+
+         </div>
+
+         <div class="projects-showcase">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card-large" data-aos="zoom-in">
+
                <div class="project-content">
-                  <h3>Query Performance Analyzer</h3>
-                  <p>Real-time SQL optimization tool reducing execution time by 30%. Features visualization dashboards. IEEE Published.</p>
+
+                  <h3>Cloud-Native Serverless Web Application</h3>
+
+                  <p>
+                     Built a scalable cloud-native application using
+                     FastAPI, Terraform, AWS Lambda, SNS, DynamoDB,
+                     EC2, RDS, and GitHub Actions with secure CI/CD
+                     workflows and infrastructure automation.
+                  </p>
+
                   <div class="project-tech">
-                     <span>Django</span>
-                     <span>PostgreSQL</span>
+                     <span>AWS</span>
+                     <span>Terraform</span>
+                     <span>FastAPI</span>
+                     <span>CI/CD</span>
+                  </div>
+
+                  <a
+                     href="https://github.com/KeerthanaDeviGovindaraj"
+                     target="_blank"
+                     class="project-link"
+                  >
+                     View Project
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+
+               </div>
+
+            </div>
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card-large" data-aos="zoom-in">
+
+               <div class="project-content">
+
+                  <h3>GLIMPSE: AI Sports Commentary Platform</h3>
+
+                  <p>
+                     Developed an AI-powered sports commentary platform
+                     using React.js, Redux, Node.js, MongoDB, and
+                     Google Gemini API reducing manual commentary
+                     generation effort by 80%.
+                  </p>
+
+                  <div class="project-tech">
+                     <span>React.js</span>
+                     <span>Node.js</span>
+                     <span>MongoDB</span>
+                     <span>Gemini API</span>
+                  </div>
+
+                  <a
+                     href="https://github.com/KeerthanaDeviGovindaraj"
+                     target="_blank"
+                     class="project-link"
+                  >
+                     View Project
+                     <i class="ri-arrow-right-line"></i>
+                  </a>
+
+               </div>
+
+            </div>
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card-large" data-aos="zoom-in">
+
+               <div class="project-content">
+
+                  <h3>Eye Tracking Based ASD Diagnosis</h3>
+
+                  <p>
+                     Designed a deep learning pipeline using CNNs,
+                     TensorFlow, PCA, and OpenCV for early autism
+                     spectrum disorder detection from eye-tracking data.
+                  </p>
+
+                  <div class="project-tech">
+                     <span>TensorFlow</span>
+                     <span>CNN</span>
+                     <span>OpenCV</span>
                      <span>Python</span>
                   </div>
-                  <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" class="project-link">
-                     View Project <i class="ri-arrow-right-line"></i>
+
+                  <a
+                     href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL"
+                     target="_blank"
+                     class="project-link"
+                  >
+                     View Project
+                     <i class="ri-arrow-right-line"></i>
                   </a>
+
                </div>
+
             </div>
+
          </div>
+
       </div>
+
    </section>
 
-   <!-- Footer -->
-   <footer class="footer">
+   <!-- CONTACT -->
+   <section class="contact-section" id="contact">
+
       <div class="container">
-         <div class="footer-content">
-            <div class="footer-brand">
-               <a href="index.html" class="footer-logo">KG</a>
-               <p>Building the future, one line of code at a time.</p>
-            </div>
-            <div class="footer-links">
-               <div class="footer-column">
-                  <h4>Navigation</h4>
-                  <a href="index.html">Home</a>
-                  <a href="about.html">About</a>
-                  <a href="work.html">Projects</a>
-               </div>
-               <div class="footer-column">
-                  <h4>Connect</h4>
-                   <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank">GitHub</a>
-                  <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank">LinkedIn</a>
-                  <!-- <a href="mailto:govindaraj.ke@northeastern.edu">Email</a> -->
-               </div>
-            </div>
+
+         <div class="contact-content" data-aos="fade-up">
+
+            <h2 class="section-title">
+               Let's Connect
+            </h2>
+
+            <p>
+               I'm actively looking for Software Engineering,
+               Full Stack Development, and Cloud Engineering
+               opportunities.
+            </p>
+
+            <a
+               href="mailto:govindaraj.ke@northeastern.edu"
+               class="btn btn-primary"
+            >
+               <i class="ri-send-plane-line"></i>
+               Contact Me
+            </a>
+
          </div>
-         <div class="footer-bottom">
-            <p>© 2025 Keerthana Devi G. All rights reserved.</p>
-         </div>
+
       </div>
+
+   </section>
+
+   <!-- FOOTER -->
+   <footer class="footer">
+
+      <div class="container">
+
+         <div class="footer-content">
+
+            <div class="footer-brand">
+
+               <a href="#home" class="footer-logo">
+                  KG
+               </a>
+
+               <p>
+                  Building scalable applications and intelligent systems.
+               </p>
+
+            </div>
+
+            <div class="footer-links">
+
+               <div class="footer-column">
+
+                  <h4>Navigation</h4>
+
+                  <a href="#home">Home</a>
+                  <a href="#skills">Skills</a>
+                  <a href="#projects">Projects</a>
+
+               </div>
+
+               <div class="footer-column">
+
+                  <h4>Connect</h4>
+
+                  <a
+                     href="https://github.com/KeerthanaDeviGovindaraj"
+                     target="_blank"
+                  >
+                     GitHub
+                  </a>
+
+                  <a
+                     href="https://www.linkedin.com/in/keerthanadevig28062002/"
+                     target="_blank"
+                  >
+                     LinkedIn
+                  </a>
+
+               </div>
+
+            </div>
+
+         </div>
+
+         <div class="footer-bottom">
+
+            <p>
+               © 2026 Keerthana Devi Govindaraj. All rights reserved.
+            </p>
+
+         </div>
+
+      </div>
+
    </footer>
 
+   <!-- SCROLL TOP -->
    <a href="#" class="scroll-top" id="scroll-top">
       <i class="ri-arrow-up-line"></i>
    </a>
 
+   <!-- AOS JS -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script>
+      AOS.init({
+         duration: 1000,
+         once: true
+      });
+   </script>
+
+   <!-- JS -->
    <script src="script.js"></script>
+
 </body>
 </html>
