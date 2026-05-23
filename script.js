@@ -290,3 +290,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
    console.log("Portfolio Loaded Successfully 🚀");
 });
+
+/* ===============================
+   CURSOR GLOW
+================================ */
+
+const glow = document.querySelector('.cursor-glow');
+
+window.addEventListener('mousemove', e => {
+
+   glow.style.left = `${e.clientX}px`;
+   glow.style.top = `${e.clientY}px`;
+
+});
+
+/* ===============================
+   PARALLAX EFFECT
+================================ */
+
+window.addEventListener('scroll', () => {
+
+   const scrollY = window.scrollY;
+
+   document.querySelectorAll('.orb').forEach(
+      (orb, index) => {
+
+         const speed = (index + 1) * 0.2;
+
+         orb.style.transform =
+            `translateY(${scrollY * speed}px)`;
+      }
+   );
+
+});
+
+/* ===============================
+   ACTIVE PROJECT HOVER
+================================ */
+
+const projectCards =
+document.querySelectorAll('.project-card-large');
+
+projectCards.forEach(card => {
+
+   card.addEventListener('mousemove', e => {
+
+      const rect = card.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.background = `
+         radial-gradient(
+            circle at ${x}px ${y}px,
+            rgba(124,58,237,.18),
+            rgba(255,255,255,.04)
+         )
+      `;
+   });
+
+});
