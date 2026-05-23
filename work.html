@@ -3,383 +3,715 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- SEO -->
+   <meta name="description" content="Keerthana Devi G - Full Stack Developer & AI Engineer Portfolio">
+   <meta name="keywords" content="Full Stack Developer, React, Node.js, AI Engineer, Machine Learning, Portfolio">
+
    <link rel="shortcut icon" href="assets/img/android-chrome-512x512.png" type="image/x-icon">
+
+   <!-- Remix Icons -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+   <!-- Main CSS -->
    <link rel="stylesheet" href="style.css">
-   <title>Projects - Keerthana Devi G</title>
+
+   <title>Projects | Keerthana Devi G</title>
 </head>
+
 <body>
+
+   <!-- Animated Background -->
    <div class="bg-animation"></div>
 
-   <!-- Header -->
-  <!-- Header -->
-<header class="header">
-   <nav class="nav container">
-      <a href="index.html" class="nav__logo">KG</a>
-      <div class="nav__menu" id="nav-menu">
-         <ul class="nav__list">
-            <i class="ri-close-line nav__close" id="nav-close"></i>
-            <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
-            <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="work.html" class="nav__link">Projects</a></li>
-         </ul>
-      </div>
-      <div class="nav__actions">
-         <i class="ri-moon-line change-theme" id="theme-button"></i>
-         <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line"></i>
-         </div>
-      </div>
-   </nav>
-</header>
+   <!--==================== HEADER ====================-->
+   <header class="header">
+      <nav class="nav container">
 
-   <!-- Projects Hero -->
+         <a href="index.html" class="nav__logo">
+            KG
+         </a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+
+               <li class="nav__item">
+                  <a href="index.html" class="nav__link">
+                     Home
+                  </a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="about.html" class="nav__link">
+                     About
+                  </a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="work.html" class="nav__link active-link">
+                     Projects
+                  </a>
+               </li>
+
+               <i class="ri-close-line nav__close" id="nav-close"></i>
+
+            </ul>
+         </div>
+
+         <div class="nav__actions">
+
+            <!-- Theme Button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== HERO ====================-->
    <section class="projects-hero">
+
       <div class="container">
-         <h1 class="page-title">Project <span class="gradient-text">Portfolio</span></h1>
-         <p class="page-subtitle">Innovative solutions powered by cutting-edge technology</p>
+
+         <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to Software Engineering Opportunities
+         </div>
+
+         <h1 class="page-title">
+            Project <span class="gradient-text">Portfolio</span>
+         </h1>
+
+         <p class="page-subtitle">
+            Full-stack applications, AI systems, and scalable software engineering projects.
+         </p>
+
+         <div class="hero-buttons">
+
+            <a href="assets/resume/Keerthana_Devi_Resume.pdf"
+               class="btn btn-primary"
+               download>
+
+               <i class="ri-download-line"></i>
+               Download Resume
+            </a>
+
+            <a href="https://github.com/KeerthanaDeviGovindaraj"
+               target="_blank"
+               class="btn btn-secondary">
+
+               <i class="ri-github-line"></i>
+               GitHub
+            </a>
+
+         </div>
+
       </div>
+
    </section>
 
-   <!-- Projects Grid -->
+   <!--==================== PROJECTS ====================-->
    <section class="projects-section">
+
       <div class="container">
+
          <div class="projects-grid" id="projectsGrid">
-            
 
-            <!-- Project: GLIMPSE - Sports Commentary -->
-<div class="project-card" data-category="fullstack web ml">
-   <div class="project-image">
-      <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
-         <defs>
-            <linearGradient id="gradGlimpse" x1="0%" y1="0%" x2="100%" y2="100%">
-               <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-               <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-            </linearGradient>
-         </defs>
-         <rect width="100%" height="100%" fill="url(#gradGlimpse)" opacity="0.3"/>
-         <circle cx="30%" cy="40%" r="25" fill="rgba(255,255,255,0.2)"/>
-         <circle cx="70%" cy="40%" r="25" fill="rgba(255,255,255,0.2)"/>
-         <text x="50%" y="45%" text-anchor="middle" fill="white" font-size="50" font-weight="bold">⚽</text>
-         <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="20" font-weight="bold">🏏 GLIMPSE Sports</text>
-      </svg>
-      <div class="project-overlay">
-         <a href="https://github.com/rushita-vachhani/GLIMPSE" target="_blank" class="overlay-btn">
-            <i class="ri-github-line"></i>
-         </a>
-         <a href="https://glimpse-kappa.vercel.app/" target="_blank" class="overlay-btn">
-            <i class="ri-external-link-line"></i>
-         </a>
-      </div>
-   </div>
-   <div class="project-content">
-      <div class="project-header">
-         <h3 class="project-title">GLIMPSE - Sports Commentary</h3>
-         <span class="project-badge">Featured</span>
-      </div>
-      <div class="project-tech-tags">
-         <span class="tech-tag">React</span>
-         <span class="tech-tag">Node.js</span>
-         <span class="tech-tag">MongoDB</span>
-         <span class="tech-tag">Express</span>
-         <span class="tech-tag">Gemini AI</span>
-      </div>
-      <p class="project-description">
-         Full-stack sports commentary platform featuring AI-generated live match analysis using Google Gemini API. Implemented JWT and OAuth 2.0 authentication with role-based access control for users, analysts, and admins. Integrated real-time sports data with interactive API documentation.
-      </p>
-      <div class="project-tags">
-         <span class="category-tag fullstack">Full Stack</span>
-         <span class="category-tag">AI Integration</span>
-         <span class="category-tag">Real-time</span>
-      </div>
-      <a href="https://glimpse-kappa.vercel.app/" target="_blank" class="project-link-btn">
-         View Project <i class="ri-arrow-right-line"></i>
-      </a>
-   </div>
-</div>
+            <!--==================== PROJECT 1 ====================-->
+            <div class="project-card" data-category="fullstack ai">
 
-
-
-            <!-- Project 1: ASD Detection -->
-            <div class="project-card" data-category="ml">
                <div class="project-image">
+
                   <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+
                      <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <linearGradient id="gradGlimpse" x1="0%" y1="0%" x2="100%" y2="100%">
                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
                         </linearGradient>
                      </defs>
-                     <rect width="100%" height="100%" fill="url(#grad1)" opacity="0.3"/>
-                     <circle cx="50%" cy="40%" r="40" fill="rgba(255,255,255,0.2)"/>
-                     <circle cx="50%" cy="40%" r="50" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                     <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="24" font-weight="bold">👁️ ASD Detection</text>
+
+                     <rect width="100%" height="100%" fill="url(#gradGlimpse)" opacity="0.3"/>
+
+                     <text x="50%" y="45%" text-anchor="middle" fill="white" font-size="60">⚽</text>
+
+                     <text x="50%" y="75%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="22"
+                           font-weight="bold">
+
+                        GLIMPSE Sports
+                     </text>
+
                   </svg>
+
                   <div class="project-overlay">
-                     <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL" target="_blank" class="overlay-btn">
+
+                     <a href="https://github.com/rushita-vachhani/GLIMPSE"
+                        target="_blank"
+                        class="overlay-btn">
+
                         <i class="ri-github-line"></i>
                      </a>
-                     <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL" target="_blank" class="overlay-btn">
+
+                     <a href="https://glimpse-kappa.vercel.app/"
+                        target="_blank"
+                        class="overlay-btn">
+
                         <i class="ri-external-link-line"></i>
                      </a>
+
                   </div>
+
                </div>
+
                <div class="project-content">
+
                   <div class="project-header">
-                     <h3 class="project-title">Eye-Tracking ASD Diagnosis</h3>
-                     <span class="project-badge ieee">IEEE Published</span>
+
+                     <h3 class="project-title">
+                        GLIMPSE - AI Sports Commentary Platform
+                     </h3>
+
+                     <span class="project-badge">
+                        Production
+                     </span>
+
                   </div>
+
                   <div class="project-tech-tags">
-                     <span class="tech-tag">CNN</span>
-                     <span class="tech-tag">TensorFlow</span>
-                     <span class="tech-tag">PCA</span>
-                     <span class="tech-tag">OpenCV</span>
+
+                     <span class="tech-tag">React</span>
+                     <span class="tech-tag">Node.js</span>
+                     <span class="tech-tag">MongoDB</span>
+                     <span class="tech-tag">Express</span>
+                     <span class="tech-tag">Gemini AI</span>
+                     <span class="tech-tag">JWT</span>
+
                   </div>
+
                   <p class="project-description">
-                     Applied deep learning with CNNs and PCA for early detection of Autism Spectrum Disorder from eye-tracking datasets. Leveraged transfer learning to improve model accuracy by 20% compared to baseline.
+                     Engineered a full-stack AI-powered sports commentary platform with live match insights using Google Gemini API. Built secure JWT + OAuth authentication with role-based access control and integrated real-time sports APIs. Optimized frontend performance and deployed scalable production-ready architecture on Vercel.
                   </p>
+
                   <div class="project-tags">
-                     <span class="category-tag ml">Machine Learning</span>
-                     <span class="category-tag">Computer Vision</span>
-                     <span class="category-tag">Healthcare</span>
+
+                     <span class="category-tag">Full Stack</span>
+                     <span class="category-tag">AI Integration</span>
+                     <span class="category-tag">Real-time Systems</span>
+
                   </div>
-                  <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL" target="_blank" class="project-link-btn">
-                     View Project <i class="ri-arrow-right-line"></i>
+
+                  <a href="https://glimpse-kappa.vercel.app/"
+                     target="_blank"
+                     class="project-link-btn">
+
+                     View Live Project
+                     <i class="ri-arrow-right-line"></i>
+
                   </a>
+
                </div>
+
             </div>
 
-            <!-- Project 2: E-Commerce Platform -->
-            <div class="project-card" data-category="fullstack backend">
+            <!--==================== PROJECT 2 ====================-->
+            <div class="project-card" data-category="backend fullstack">
+
                <div class="project-image">
+
                   <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+
                      <defs>
                         <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
                            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
                            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
                         </linearGradient>
                      </defs>
+
                      <rect width="100%" height="100%" fill="url(#grad2)" opacity="0.3"/>
-                     <rect x="25%" y="30%" width="50%" height="40%" rx="5" fill="rgba(255,255,255,0.2)"/>
-                     <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="24" font-weight="bold">🛒 E-Commerce</text>
+
+                     <text x="50%" y="45%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="60">
+
+                        🛒
+                     </text>
+
+                     <text x="50%" y="75%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="20"
+                           font-weight="bold">
+
+                        Microservices Commerce
+                     </text>
+
                   </svg>
+
                   <div class="project-overlay">
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/Microservices-Based-E-Commerce-Platform" target="_blank" class="overlay-btn">
+
+                     <a href="https://github.com/KeerthanaDeviGovindaraj/Microservices-Based-E-Commerce-Platform"
+                        target="_blank"
+                        class="overlay-btn">
+
                         <i class="ri-github-line"></i>
+
                      </a>
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/Microservices-Based-E-Commerce-Platform" target="_blank" class="overlay-btn">
-                        <i class="ri-external-link-line"></i>
-                     </a>
+
                   </div>
+
                </div>
+
                <div class="project-content">
+
                   <div class="project-header">
-                     <h3 class="project-title">Microservices E-Commerce Platform</h3>
+
+                     <h3 class="project-title">
+                        Microservices E-Commerce Platform
+                     </h3>
+
+                     <span class="project-badge">
+                        Backend
+                     </span>
+
                   </div>
+
                   <div class="project-tech-tags">
+
                      <span class="tech-tag">Java</span>
                      <span class="tech-tag">Microservices</span>
+                     <span class="tech-tag">REST APIs</span>
                      <span class="tech-tag">OOD</span>
+
                   </div>
+
                   <p class="project-description">
-                     Developed a scalable e-commerce platform using microservices architecture. Implemented service-oriented design patterns to ensure modularity, scalability, and maintainability with comprehensive user management and order processing.
+                     Architected a scalable microservices-based e-commerce system using Java and distributed backend services. Designed modular APIs, order workflows, and user management systems following OOD principles and service-oriented architecture patterns.
                   </p>
+
                   <div class="project-tags">
-                     <span class="category-tag fullstack">Full Stack</span>
+
                      <span class="category-tag">System Design</span>
-                     <span class="category-tag">Backend</span>
+                     <span class="category-tag">Backend Engineering</span>
+                     <span class="category-tag">Scalability</span>
+
                   </div>
-                  <a href="https://github.com/KeerthanaDeviGovindaraj/Microservices-Based-E-Commerce-Platform" target="_blank" class="project-link-btn">
-                     View Project <i class="ri-arrow-right-line"></i>
+
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/Microservices-Based-E-Commerce-Platform"
+                     target="_blank"
+                     class="project-link-btn">
+
+                     View Repository
+                     <i class="ri-arrow-right-line"></i>
+
                   </a>
+
                </div>
+
             </div>
 
-            <!-- Project 3: Heart Disease Prediction -->
-            <div class="project-card" data-category="ml">
+            <!--==================== PROJECT 3 ====================-->
+            <div class="project-card" data-category="ml research">
+
                <div class="project-image">
+
                   <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+
+                     <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                           <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                           <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                     </defs>
+
+                     <rect width="100%" height="100%" fill="url(#grad1)" opacity="0.3"/>
+
+                     <text x="50%" y="45%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="60">
+
+                        👁️
+                     </text>
+
+                     <text x="50%" y="75%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="20"
+                           font-weight="bold">
+
+                        ASD Detection Research
+                     </text>
+
+                  </svg>
+
+                  <div class="project-overlay">
+
+                     <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL"
+                        target="_blank"
+                        class="overlay-btn">
+
+                        <i class="ri-github-line"></i>
+
+                     </a>
+
+                  </div>
+
+               </div>
+
+               <div class="project-content">
+
+                  <div class="project-header">
+
+                     <h3 class="project-title">
+                        Eye-Tracking ASD Diagnosis
+                     </h3>
+
+                     <span class="project-badge ieee">
+                        IEEE Research
+                     </span>
+
+                  </div>
+
+                  <div class="project-tech-tags">
+
+                     <span class="tech-tag">CNN</span>
+                     <span class="tech-tag">TensorFlow</span>
+                     <span class="tech-tag">PCA</span>
+                     <span class="tech-tag">OpenCV</span>
+
+                  </div>
+
+                  <p class="project-description">
+                     Published IEEE research project applying CNNs, PCA, and transfer learning for early Autism Spectrum Disorder detection using eye-tracking datasets. Improved prediction accuracy by 20% over baseline models through optimized feature extraction and deep learning pipelines.
+                  </p>
+
+                  <div class="project-tags">
+
+                     <span class="category-tag">Machine Learning</span>
+                     <span class="category-tag">Computer Vision</span>
+                     <span class="category-tag">Healthcare AI</span>
+
+                  </div>
+
+                  <a href="https://github.com/Keerthanadevi28/Eye-Tracking-for-Early-ASD-Detection-using-ML-DL"
+                     target="_blank"
+                     class="project-link-btn">
+
+                     View Research
+                     <i class="ri-arrow-right-line"></i>
+
+                  </a>
+
+               </div>
+
+            </div>
+
+            <!--==================== PROJECT 4 ====================-->
+            <div class="project-card" data-category="ml healthcare">
+
+               <div class="project-image">
+
+                  <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+
                      <defs>
                         <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
                            <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
                            <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
                         </linearGradient>
                      </defs>
+
                      <rect width="100%" height="100%" fill="url(#grad4)" opacity="0.3"/>
-                     <text x="50%" y="45%" text-anchor="middle" fill="white" font-size="60" font-weight="bold">❤️</text>
-                     <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Heart Disease ML</text>
+
+                     <text x="50%" y="45%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="60">
+
+                        ❤️
+                     </text>
+
+                     <text x="50%" y="75%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="20"
+                           font-weight="bold">
+
+                        Heart Disease ML
+                     </text>
+
                   </svg>
+
                   <div class="project-overlay">
-                     <a href="https://github.com/Keerthanadevi28/CardioPrognosis-Model" target="_blank" class="overlay-btn">
+
+                     <a href="https://github.com/Keerthanadevi28/CardioPrognosis-Model"
+                        target="_blank"
+                        class="overlay-btn">
+
                         <i class="ri-github-line"></i>
+
                      </a>
-                     <a href="https://github.com/Keerthanadevi28/CardioPrognosis-Model" target="_blank" class="overlay-btn">
-                        <i class="ri-external-link-line"></i>
-                     </a>
+
                   </div>
+
                </div>
+
                <div class="project-content">
+
                   <div class="project-header">
-                     <h3 class="project-title">Heart Disease Prediction Model</h3>
+
+                     <h3 class="project-title">
+                        Heart Disease Prediction Model
+                     </h3>
+
+                     <span class="project-badge">
+                        ML
+                     </span>
+
                   </div>
+
                   <div class="project-tech-tags">
+
                      <span class="tech-tag">Python</span>
                      <span class="tech-tag">Scikit-learn</span>
                      <span class="tech-tag">KNN</span>
                      <span class="tech-tag">Logistic Regression</span>
+
                   </div>
+
                   <p class="project-description">
-                     Built classification models for predicting heart disease with optimized accuracy using grid search hyperparameter tuning. Compared multiple algorithms to identify the best-fit model for healthcare prediction tasks.
+                     Developed machine learning classification models for cardiovascular disease prediction using Scikit-learn. Applied hyperparameter tuning, feature engineering, and model comparison techniques to improve predictive performance across healthcare datasets.
                   </p>
+
                   <div class="project-tags">
-                     <span class="category-tag ml">Machine Learning</span>
+
+                     <span class="category-tag">Machine Learning</span>
                      <span class="category-tag">Healthcare</span>
                      <span class="category-tag">Classification</span>
+
                   </div>
-                  <a href="https://github.com/Keerthanadevi28/CardioPrognosis-Model" target="_blank" class="project-link-btn">
-                     View Project <i class="ri-arrow-right-line"></i>
+
+                  <a href="https://github.com/Keerthanadevi28/CardioPrognosis-Model"
+                     target="_blank"
+                     class="project-link-btn">
+
+                     View Project
+                     <i class="ri-arrow-right-line"></i>
+
                   </a>
+
                </div>
+
             </div>
 
-            <!-- Project 4: Web Design Projects -->
-            <div class="project-card" data-category="web">
+            <!--==================== PROJECT 5 ====================-->
+            <div class="project-card" data-category="frontend web">
+
                <div class="project-image">
+
                   <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+
                      <defs>
                         <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
                         </linearGradient>
                      </defs>
+
                      <rect width="100%" height="100%" fill="url(#grad6)" opacity="0.3"/>
-                     <rect x="20%" y="25%" width="60%" height="45%" rx="3" fill="rgba(255,255,255,0.2)"/>
-                     <rect x="25%" y="30%" width="50%" height="5%" fill="rgba(255,255,255,0.3)"/>
-                     <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="20" font-weight="bold">🎨 Web Design</text>
+
+                     <text x="50%" y="45%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="60">
+
+                        🎨
+                     </text>
+
+                     <text x="50%" y="75%"
+                           text-anchor="middle"
+                           fill="white"
+                           font-size="20"
+                           font-weight="bold">
+
+                        Frontend Engineering
+                     </text>
+
                   </svg>
+
                   <div class="project-overlay">
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/INFO6150---ASSIGNMENTS" target="_blank" class="overlay-btn">
+
+                     <a href="https://github.com/KeerthanaDeviGovindaraj/INFO6150---ASSIGNMENTS"
+                        target="_blank"
+                        class="overlay-btn">
+
                         <i class="ri-github-line"></i>
+
                      </a>
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/INFO6150---ASSIGNMENTS" target="_blank" class="overlay-btn">
-                        <i class="ri-external-link-line"></i>
-                     </a>
+
                   </div>
+
                </div>
+
                <div class="project-content">
+
                   <div class="project-header">
-                     <h3 class="project-title">Web Design & UX Engineering</h3>
+
+                     <h3 class="project-title">
+                        Web Design & UX Engineering
+                     </h3>
+
+                     <span class="project-badge">
+                        Frontend
+                     </span>
+
                   </div>
+
                   <div class="project-tech-tags">
-                     <span class="tech-tag">JavaScript</span>
-                     <span class="tech-tag">HTML/CSS</span>
+
                      <span class="tech-tag">React</span>
                      <span class="tech-tag">TypeScript</span>
-                     <span class="tech-tag">Tailwind CSS</span>
+                     <span class="tech-tag">Tailwind</span>
                      <span class="tech-tag">Redux</span>
-                     <span class="tech-tag">Node.js</span>
-                     <span class="tech-tag">Express</span>
-                     <span class="tech-tag">MongoDB</span>
-                     <span class="tech-tag">RESTful APIs</span>
                      <span class="tech-tag">Angular</span>
-                  </div>
-                  <p class="project-description">
-                     Collection of web design and user experience engineering projects showcasing responsive design, interactive interfaces, and modern web development practices. Implemented accessibility standards and optimized interactions.
-                  </p>
-                  <div class="project-tags">
-                     <span class="category-tag web">Web Development</span>
-                     <span class="category-tag">UX Design</span>
-                     <span class="category-tag">Frontend</span>
-                  </div>
-                  <a href="https://github.com/KeerthanaDeviGovindaraj/INFO6150---ASSIGNMENTS" target="_blank" class="project-link-btn">
-                     View Project <i class="ri-arrow-right-line"></i>
-                  </a>
-               </div>
-            </div>
 
-            <!-- Project 5: Autism Eye Analysis -->
-            <div class="project-card" data-category="ml">
-               <div class="project-image">
-                  <svg width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <linearGradient id="grad9" x1="0%" y1="0%" x2="100%" y2="100%">
-                           <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
-                           <stop offset="100%" style="stop-color:#fecfef;stop-opacity:1" />
-                        </linearGradient>
-                     </defs>
-                     <rect width="100%" height="100%" fill="url(#grad9)" opacity="0.3"/>
-                     <circle cx="50%" cy="40%" r="30" fill="rgba(255,255,255,0.2)"/>
-                     <text x="50%" y="75%" text-anchor="middle" fill="white" font-size="20" font-weight="bold">👁️ Autism Analysis</text>
-                  </svg>
-                  <div class="project-overlay">
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/Autism_Eye" target="_blank" class="overlay-btn">
-                        <i class="ri-github-line"></i>
-                     </a>
-                     <a href="https://github.com/KeerthanaDeviGovindaraj/Autism_Eye" target="_blank" class="overlay-btn">
-                        <i class="ri-external-link-line"></i>
-                     </a>
                   </div>
-               </div>
-               <div class="project-content">
-                  <div class="project-header">
-                     <h3 class="project-title">Autism Eye Analysis</h3>
-                  </div>
-                  <div class="project-tech-tags">
-                     <span class="tech-tag">Jupyter</span>
-                     <span class="tech-tag">ML</span>
-                     <span class="tech-tag">Data Science</span>
-                  </div>
+
                   <p class="project-description">
-                     Additional implementation and analysis for autism detection using eye-tracking data. Comprehensive Jupyter notebooks documenting the machine learning pipeline, exploratory data analysis, and model evaluation processes.
+                     Designed responsive frontend applications and interactive user experiences using modern JavaScript frameworks. Focused on accessibility, performance optimization, component architecture, and scalable frontend engineering practices.
                   </p>
+
                   <div class="project-tags">
-                     <span class="category-tag ml">Machine Learning</span>
-                     <span class="category-tag">Research</span>
-                     <span class="category-tag">Analytics</span>
+
+                     <span class="category-tag">Frontend</span>
+                     <span class="category-tag">UX Engineering</span>
+                     <span class="category-tag">Responsive Design</span>
+
                   </div>
-                  <a href="https://github.com/KeerthanaDeviGovindaraj/Autism_Eye" target="_blank" class="project-link-btn">
-                     View Project <i class="ri-arrow-right-line"></i>
+
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/INFO6150---ASSIGNMENTS"
+                     target="_blank"
+                     class="project-link-btn">
+
+                     View Repository
+                     <i class="ri-arrow-right-line"></i>
+
                   </a>
+
                </div>
+
             </div>
 
          </div>
+
       </div>
+
    </section>
 
-   <!-- Footer -->
-   <footer class="footer">
+   <!--==================== PROJECT STATS ====================-->
+   <section class="project-stats">
+
       <div class="container">
-         <div class="footer-content">
-            <div class="footer-brand">
-               <a href="index.html" class="footer-logo">KG</a>
-               <p>Building the future, one line of code at a time.</p>
+
+         <div class="stats-grid">
+
+            <div class="stat-card">
+               <h3>5+</h3>
+               <p>Production Projects</p>
             </div>
-            <div class="footer-links">
-               <div class="footer-column">
-                  <h4>Navigation</h4>
-                  <a href="index.html">Home</a>
-                  <a href="about.html">About</a>
-                  <a href="work.html">Projects</a>
-               </div>
-               <div class="footer-column">
-                  <h4>Connect</h4>
-                  <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank">GitHub</a>
-                  <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank">LinkedIn</a>
-                  <!-- <a href="mailto:govindaraj.ke@northeastern.edu">Email</a> -->
-               </div>
+
+            <div class="stat-card">
+               <h3>15+</h3>
+               <p>Technologies Used</p>
             </div>
+
+            <div class="stat-card">
+               <h3>1</h3>
+               <p>IEEE Publication</p>
+            </div>
+
+            <div class="stat-card">
+               <h3>Full Stack + AI</h3>
+               <p>Core Specialization</p>
+            </div>
+
          </div>
-         <div class="footer-bottom">
-            <p>© 2025 Keerthana Devi G. All rights reserved.</p>
-         </div>
+
       </div>
+
+   </section>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+
+      <div class="container">
+
+         <div class="footer-content">
+
+            <div class="footer-brand">
+
+               <a href="index.html" class="footer-logo">
+                  KG
+               </a>
+
+               <p>
+                  Building scalable software systems and intelligent AI-powered applications.
+               </p>
+
+            </div>
+
+            <div class="footer-column">
+
+               <h4>Navigation</h4>
+
+               <a href="index.html">Home</a>
+               <a href="about.html">About</a>
+               <a href="work.html">Projects</a>
+
+            </div>
+
+            <div class="footer-column">
+
+               <h4>Connect</h4>
+
+               <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank">
+                  GitHub
+               </a>
+
+               <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank">
+                  LinkedIn
+               </a>
+
+            </div>
+
+         </div>
+
+         <div class="footer-bottom">
+
+            <p>
+               © 2026 Keerthana Devi G. All rights reserved.
+            </p>
+
+         </div>
+
+      </div>
+
    </footer>
 
+   <!--==================== SCROLL TOP ====================-->
    <a href="#" class="scroll-top" id="scroll-top">
       <i class="ri-arrow-up-line"></i>
    </a>
 
+   <!--==================== MAIN JS ====================-->
    <script src="script.js"></script>
+
 </body>
 </html>
