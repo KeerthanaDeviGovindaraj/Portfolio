@@ -598,7 +598,7 @@ section{
 
    margin-bottom:1.8rem;
 
-   color:var(--title-color);
+   color:inherit;
 }
 
 /* ======================================================
@@ -627,7 +627,7 @@ section{
 
    border:1px solid rgba(124,58,237,.12);
 
-   color:var(--primary);
+   color:var(--title-color);
 
    font-size:.92rem;
    font-weight:600;
