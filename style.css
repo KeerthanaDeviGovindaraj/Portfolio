@@ -698,7 +698,6 @@ section{
 .skill-tag:active{
    transform:scale(.96);
 }
-
 /* ======================================================
    EXPERIENCE
 ====================================================== */
@@ -712,14 +711,9 @@ section{
 .experience-card{
    position:relative;
 
-   background:
-      linear-gradient(
-         135deg,
-         rgba(17,24,39,.92),
-         rgba(15,23,42,.96)
-      );
+   background:var(--container-color);
 
-   border:1px solid rgba(124,58,237,.12);
+   border:1px solid var(--border-color);
 
    border-radius:28px;
 
@@ -729,8 +723,7 @@ section{
 
    backdrop-filter:blur(18px);
 
-   box-shadow:
-      0 10px 30px rgba(0,0,0,.25);
+   box-shadow:var(--shadow);
 
    transition:
       transform .35s ease,
@@ -747,7 +740,7 @@ section{
    background:
       radial-gradient(
          circle at top right,
-         rgba(124,58,237,.18),
+         rgba(124,58,237,.12),
          transparent 35%
       );
 
@@ -763,22 +756,23 @@ section{
 .experience-card:hover{
    transform:translateY(-8px);
 
-   border:1px solid rgba(124,58,237,.3);
+   border:1px solid rgba(124,58,237,.25);
 
    box-shadow:
-      0 20px 60px rgba(0,0,0,.35),
-      0 0 40px rgba(124,58,237,.12);
+      0 20px 60px rgba(124,58,237,.12);
 }
 
 .experience-card h3{
    font-size:1.6rem;
    margin-bottom:.6rem;
+
+   color:var(--title-color);
 }
 
 .experience-card span{
    display:block;
 
-   color:#a78bfa;
+   color:var(--primary);
 
    font-weight:600;
 
@@ -808,14 +802,9 @@ section{
 .project-card-large{
    position:relative;
 
-   background:
-      linear-gradient(
-         135deg,
-         rgba(17,24,39,.92),
-         rgba(15,23,42,.96)
-      );
+   background:var(--container-color);
 
-   border:1px solid rgba(124,58,237,.12);
+   border:1px solid var(--border-color);
 
    border-radius:30px;
 
@@ -825,8 +814,7 @@ section{
 
    backdrop-filter:blur(18px);
 
-   box-shadow:
-      0 10px 30px rgba(0,0,0,.25);
+   box-shadow:var(--shadow);
 
    transition:
       transform .35s ease,
@@ -843,7 +831,7 @@ section{
    background:
       radial-gradient(
          circle at bottom right,
-         rgba(6,182,212,.18),
+         rgba(6,182,212,.14),
          transparent 35%
       );
 
@@ -859,16 +847,17 @@ section{
 .project-card-large:hover{
    transform:translateY(-10px);
 
-   border:1px solid rgba(124,58,237,.28);
+   border:1px solid rgba(124,58,237,.25);
 
    box-shadow:
-      0 20px 60px rgba(0,0,0,.35),
-      0 0 40px rgba(124,58,237,.12);
+      0 20px 60px rgba(124,58,237,.12);
 }
 
 .project-content h3{
    font-size:2rem;
    margin-bottom:1rem;
+
+   color:var(--title-color);
 }
 
 .project-content p{
@@ -899,13 +888,13 @@ section{
    background:
       linear-gradient(
          135deg,
-         rgba(124,58,237,.14),
-         rgba(59,130,246,.10)
+         rgba(124,58,237,.10),
+         rgba(59,130,246,.08)
       );
 
-   border:1px solid rgba(124,58,237,.14);
+   border:1px solid rgba(124,58,237,.12);
 
-   color:#c4b5fd;
+   color:var(--title-color);
 
    font-size:.9rem;
    font-weight:600;
@@ -917,9 +906,10 @@ section{
    display:inline-flex;
    align-items:center;
    gap:.6rem;
-   margin-top: 1rem;
 
-   color:#a78bfa;
+   margin-top:1rem;
+
+   color:var(--primary);
 
    font-weight:700;
 
@@ -930,9 +920,9 @@ section{
 
 .project-link:hover{
    transform:translateX(5px);
-   color:#ffffff;
-}
 
+   color:var(--secondary);
+}
 /* ======================================================
    CONTACT SECTION
 ====================================================== */
