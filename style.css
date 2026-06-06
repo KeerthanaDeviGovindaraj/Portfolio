@@ -617,6 +617,8 @@ section{
    display:grid;
    gap:2rem;
    margin-top:4rem;
+   grid-template-columns: 1fr;
+
 }
 
 .project-card-large{
@@ -631,6 +633,12 @@ section{
    box-shadow:var(--shadow);
 
    transition:.35s ease;
+
+   width: 100%;
+
+   display: block;
+
+
 }
 
 .project-card-large:hover{
