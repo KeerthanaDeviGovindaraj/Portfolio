@@ -133,22 +133,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
    window.addEventListener("scroll", scrollActive);
 
-   /*=============== SMOOTH SCROLL ===============*/
+   /*=============== SMOOTH SCROLL (with header offset) ===============*/
+   const headerOffset = 90;
+
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
       anchor.addEventListener("click", function (e) {
 
-         e.preventDefault();
+         const href = this.getAttribute("href");
 
-         const target = document.querySelector(
-            this.getAttribute("href")
-         );
+         if (href === "#" || href.length < 2) return;
+
+         const target = document.querySelector(href);
 
          if (target) {
 
-            target.scrollIntoView({
-               behavior: "smooth"
-            });
+            e.preventDefault();
+
+            const top =
+               target.getBoundingClientRect().top +
+               window.pageYOffset -
+               headerOffset;
+
+            window.scrollTo({ top, behavior: "smooth" });
          }
       });
    });
