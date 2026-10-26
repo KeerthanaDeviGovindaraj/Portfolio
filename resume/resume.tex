@@ -1,0 +1,139 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+
+% ----- Page geometry -----
+\usepackage[margin=0.5in]{geometry}
+\setlength{\footskip}{4.08pt}
+
+% ----- Colors -----
+\definecolor{accent}{HTML}{6D28D9}
+\definecolor{dark}{HTML}{111827}
+
+% ----- Hyperlink styling -----
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ----- Spacing -----
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
+
+% ----- Section formatting -----
+\titleformat{\section}
+  {\color{dark}\scshape\large\bfseries}
+  {}{0em}{}[\color{accent}\titlerule\vspace{-4pt}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% ----- Custom commands -----
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\entry}[4]{%
+  \vspace{2pt}%
+  \noindent%
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}%
+  \vspace{-4pt}%
+}
+
+\newcommand{\project}[3]{%
+  \vspace{3pt}%
+  \noindent%
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} \small{\textbar{} #2} & \small #3 \\
+  \end{tabular*}%
+  \vspace{-5pt}%
+}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=0.15in, topsep=2pt, itemsep=1pt, parsep=0pt, label=\textcolor{accent}{\footnotesize$\bullet$}}
+
+% ======================================================
+\begin{document}
+
+% ----- Header -----
+\begin{center}
+  {\color{dark}\Huge\bfseries Keerthana Devi Govindaraj} \\[4pt]
+  \small
+  Boston, MA \textbar{} (857) 395-8132 \textbar{}
+  \href{mailto:govindaraj.ke@northeastern.edu}{govindaraj.ke@northeastern.edu} \\[2pt]
+  \href{https://www.linkedin.com/in/keerthanadevig28062002/}{\faLinkedin\ LinkedIn} \textbar{}
+  \href{https://github.com/KeerthanaDeviGovindaraj}{\faGithub\ GitHub} \textbar{}
+  \href{https://keerthanadevigportfolio.netlify.app/}{\faGlobe\ Portfolio}
+\end{center}
+
+% ----- Education -----
+\section{Education}
+\entry{Northeastern University}{Sep 2025 -- Dec 2027}
+      {M.S. Software Engineering Systems}{Boston, MA}
+\entry{SRM Institute of Science and Technology}{Oct 2020 -- 2024}
+      {B.Tech, Electronics \& Computer Engineering}{Chennai, India}
+
+% ----- Technical Skills -----
+\section{Technical Skills}
+\small
+\begin{tight}
+  \item \textbf{Languages:} Java, Python, JavaScript, TypeScript, HTML5/CSS3
+  \item \textbf{Frontend:} React.js, Next.js, Redux, Angular, Material-UI, Responsive UI, State Management
+  \item \textbf{Backend \& APIs:} Spring Boot, FastAPI, Django, Node.js, Express.js, REST APIs, Microservices, JWT, RBAC
+  \item \textbf{Cloud \& DevOps:} AWS (EC2, RDS, S3, Lambda, DynamoDB, IAM, CloudWatch, Route53, ALB), Terraform, GitHub Actions, CI/CD, IaC, Serverless, Auto Scaling, Docker
+  \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, SQLAlchemy, Query Optimization, Indexed Data Modeling
+  \item \textbf{Machine Learning \& AI:} TensorFlow, PyTorch, OpenCV, NLP, LLM Integration, Gemini API
+  \item \textbf{Practices:} Git, Agile, SDLC, OOP, Performance Optimization, API Testing
+\end{tight}
+
+% ----- Experience -----
+\section{Experience}
+\entry{Linedata --- Product Analyst}{Sep 2026 -- Present}{}{Boston, MA}
+\begin{tight}
+  \resumeItem{Contributing to the modernization of Linedata's Web Admin module, collaborating with product and engineering teams to improve the platform's architecture, usability, and maintainability.}
+  \resumeItem{Supporting product development and Agile initiatives across asset-management software, working with product managers, architecture, R\&D, and Scrum teams to drive feature and platform improvements.}
+\end{tight}
+
+\entry{FITA Academy --- Software Engineer}{Jan 2025 -- Aug 2025}{}{Chennai, India}
+\begin{tight}
+  \resumeItem{Led end-to-end development and deployment of a full-stack Student Management System serving 500+ students, automating enrollment, attendance, academic reporting, and progress tracking, replacing spreadsheet-based operations.}
+  \resumeItem{Designed and optimized scalable Java Spring Boot microservices and React UIs, building 20+ secure REST APIs with JWT authentication, RBAC, MongoDB, and CI/CD pipelines, achieving sub-100ms p95 response times and improving release velocity by 30\%.}
+\end{tight}
+
+\entry{Aican Automate --- Machine Learning Engineer}{Jan 2023 -- Mar 2023}{}{Chennai, India}
+\begin{tight}
+  \resumeItem{Built and evaluated NLP-based support-ticket classification systems using TF-IDF, N-gram feature engineering, Logistic Regression, and Random Forest, achieving 87\% precision and significantly reducing manual triage effort.}
+  \resumeItem{Productionized ML workflows with Docker-based containerization, creating reproducible training and deployment pipelines that enabled 5+ engineers to retrain, validate, and deploy models with minimal overhead.}
+\end{tight}
+
+% ----- Projects -----
+\section{Projects}
+\project{HeatSink --- Seawater-Cooled Data Center Siting Tool}{TypeScript, React, Vite, Vitest}{\href{https://keerthanadevigovindaraj.github.io/HeatSink/}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/HeatSink}{Code}}
+\begin{tight}
+  \resumeItem{Built a full-stack screening tool that maps coastal temperatures and models thermal-plume impact to identify where a seawater-cooled AI data center does the least harm to the ocean, with plain-English risk verdicts for planners.}
+  \resumeItem{Engineered interactive geospatial visualizations and configurable modeling sliders in TypeScript, backed by unit and property-based tests and a CI pipeline for reliable, reproducible builds.}
+\end{tight}
+
+\project{Cloud-Native Serverless Web Application}{Python, FastAPI, PostgreSQL, Terraform, AWS}{\href{https://github.com/KeerthanaDeviGovindaraj/tf-infra-fork}{Infra} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/webapp-FORK}{App}}
+\begin{tight}
+  \resumeItem{Automated provisioning of production-style AWS infrastructure using 3,000+ lines of Terraform across VPCs, EC2 Auto Scaling Groups, RDS Multi-AZ, ALB, and Route53, enabling repeatable deployments via GitHub Actions CI/CD.}
+  \resumeItem{Designed a serverless verification workflow using SNS, Lambda, and DynamoDB with token expiration and deduplication logic, and hardened security with IAM, KMS encryption, Secrets Manager, BCrypt, and ACM-managed TLS.}
+\end{tight}
+
+\project{GLIMPSE --- AI Sports Commentary Platform}{React.js, Redux, Node.js, MongoDB, Gemini API}{\href{https://glimpse-kappa.vercel.app/}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/GLIMPSE}{Code}}
+\begin{tight}
+  \resumeItem{Built an AI-powered platform that transforms live match events into real-time natural-language commentary using the Gemini API, reducing manual content-generation effort by 80\%.}
+  \resumeItem{Developed a React/Redux frontend with 15+ reusable components and Node.js backend services for match ingestion, user sessions, and commentary history, with CI/CD deployment on Vercel.}
+\end{tight}
+
+\project{Eye-Tracking Based ASD Diagnosis (Published)}{Python, TensorFlow, CNN, PCA, OpenCV}{\href{https://github.com/KeerthanaDeviGovindaraj/Autism_Eye}{Code}}
+\begin{tight}
+  \resumeItem{Applied transfer learning and PCA-based dimensionality reduction on CNN models to classify ASD risk across 10,000+ eye-tracking samples, improving prediction accuracy by 20\% over baseline models.}
+  \resumeItem{Built an OpenCV preprocessing pipeline that converted 10,000+ variable-frame-rate recordings into model-ready tensors, published as a research paper.}
+\end{tight}
+
+\end{document}
