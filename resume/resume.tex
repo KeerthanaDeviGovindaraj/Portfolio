@@ -112,6 +112,12 @@
 
 % ----- Projects -----
 \section{Projects}
+\project{SchemaLens - Legacy PostgreSQL Documentation and Lineage}{Python, TypeScript, PostgreSQL, PL/pgSQL, MCP}{\href{https://web-sigma-six-99.vercel.app}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/schemalens}{Code}}
+\begin{tight}
+  \resumeItem{Built a tool that makes legacy PostgreSQL databases understandable: searchable docs, read/write lineage parsed directly from PL/pgSQL, and LLM explanations cross-checked against static analysis, with accuracy scored against a hand-labeled benchmark in CI.}
+  \resumeItem{Shipped an MCP server so AI coding assistants answer schema questions from the real scan instead of guessing, with a privacy model that queries only system catalogs and never reads row data.}
+\end{tight}
+
 \project{HeatSink - Seawater-Cooled Data Center Siting Tool}{TypeScript, React, Vite, Vitest}{\href{https://keerthanadevigovindaraj.github.io/HeatSink/}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/HeatSink}{Code}}
 \begin{tight}
   \resumeItem{Built a full-stack screening tool that maps coastal temperatures and models thermal-plume impact to identify where a seawater-cooled AI data center does the least harm to the ocean, with plain-English risk verdicts for planners.}
@@ -122,12 +128,6 @@
 \begin{tight}
   \resumeItem{Automated provisioning of production-style AWS infrastructure using 3,000+ lines of Terraform across VPCs, EC2 Auto Scaling Groups, RDS Multi-AZ, ALB, and Route53, enabling repeatable deployments via GitHub Actions CI/CD.}
   \resumeItem{Designed a serverless verification workflow using SNS, Lambda, and DynamoDB with token expiration and deduplication logic, and hardened security with IAM, KMS encryption, Secrets Manager, BCrypt, and ACM-managed TLS.}
-\end{tight}
-
-\project{GLIMPSE - AI Sports Commentary Platform}{React.js, Redux, Node.js, MongoDB, Gemini API}{\href{https://glimpse-kappa.vercel.app/}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/GLIMPSE}{Code}}
-\begin{tight}
-  \resumeItem{Built an AI-powered platform that transforms live match events into real-time natural-language commentary using the Gemini API, reducing manual content-generation effort by 80\%.}
-  \resumeItem{Developed a React/Redux frontend with 15+ reusable components and Node.js backend services for match ingestion, user sessions, and commentary history, with CI/CD deployment on Vercel.}
 \end{tight}
 
 \project{InboxTriage - AI Email Triage Tool}{Next.js, TypeScript, Tailwind CSS, Zustand, Vitest}{\href{https://github.com/KeerthanaDeviGovindaraj/inboxtriage}{Code}}
