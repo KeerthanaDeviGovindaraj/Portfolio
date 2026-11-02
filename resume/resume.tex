@@ -29,32 +29,32 @@
 \titleformat{\section}
   {\color{dark}\scshape\large\bfseries}
   {}{0em}{}[\color{accent}\titlerule\vspace{-4pt}]
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titlespacing{\section}{0pt}{7pt}{3pt}
 
 % ----- Custom commands -----
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 
 \newcommand{\entry}[4]{%
-  \vspace{1pt}%
+  \vspace{2pt}%
   \noindent%
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textbf{#2} \\
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}%
-  \vspace{-5pt}%
+  \vspace{-4pt}%
 }
 
 \newcommand{\project}[3]{%
-  \vspace{2pt}%
+  \vspace{3pt}%
   \noindent%
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} \small{\textbar{} #2} & \small #3 \\
   \end{tabular*}%
-  \vspace{-6pt}%
+  \vspace{-5pt}%
 }
 
 \newlist{tight}{itemize}{1}
-\setlist[tight]{leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt, label=\textcolor{accent}{\footnotesize$\bullet$}}
+\setlist[tight]{leftmargin=0.15in, topsep=2pt, itemsep=1pt, parsep=0pt, label=\textcolor{accent}{\footnotesize$\bullet$}}
 
 % ======================================================
 \begin{document}
@@ -128,12 +128,6 @@
 \begin{tight}
   \resumeItem{Automated provisioning of production-style AWS infrastructure using 3,000+ lines of Terraform across VPCs, EC2 Auto Scaling Groups, RDS Multi-AZ, ALB, and Route53, enabling repeatable deployments via GitHub Actions CI/CD.}
   \resumeItem{Designed a serverless verification workflow using SNS, Lambda, and DynamoDB with token expiration and deduplication logic, and hardened security with IAM, KMS encryption, Secrets Manager, BCrypt, and ACM-managed TLS.}
-\end{tight}
-
-\project{InboxTriage - AI Email Triage Tool}{Next.js, TypeScript, Tailwind CSS, Zustand, Vitest}{\href{https://github.com/KeerthanaDeviGovindaraj/inboxtriage}{Code}}
-\begin{tight}
-  \resumeItem{Built an AI tool that triages client emails for accounting and bookkeeping firms, returning a category, urgency level, extracted details, and a ready-to-send draft reply using the OpenAI API.}
-  \resumeItem{Engineered a Next.js and TypeScript frontend with a tested Zustand state layer and Vitest unit tests, deployed with CI/CD on Vercel for fast, reliable releases.}
 \end{tight}
 
 \project{Eye-Tracking Based ASD Diagnosis (Published)}{Python, TensorFlow, CNN, PCA, OpenCV}{\href{https://github.com/KeerthanaDeviGovindaraj/Autism_Eye}{Code}}
