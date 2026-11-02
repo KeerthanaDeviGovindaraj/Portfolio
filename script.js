@@ -1,300 +1,82 @@
-/*==================================================
-  PORTFOLIO WEBSITE JAVASCRIPT
-==================================================*/
-
+/* ==========================================================
+   PORTFOLIO — interactions
+   ========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
 
-   /*=============== MOBILE MENU ===============*/
+   /* ---------- Mobile menu ---------- */
    const navMenu = document.getElementById("nav-menu");
    const navToggle = document.getElementById("nav-toggle");
    const navClose = document.getElementById("nav-close");
-   const navLinks = document.querySelectorAll(".nav__link");
 
-   /* Show Menu */
-   if (navToggle) {
-      navToggle.addEventListener("click", () => {
-         navMenu.classList.add("show-menu");
-      });
-   }
+   const openMenu = () => navMenu.classList.add("show");
+   const closeMenu = () => navMenu.classList.remove("show");
 
-   /* Hide Menu */
-   if (navClose) {
-      navClose.addEventListener("click", () => {
-         navMenu.classList.remove("show-menu");
-      });
-   }
-
-   /* Remove Mobile Menu on Link Click */
-   navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-         navMenu.classList.remove("show-menu");
-      });
-   });
-
-   /*=============== HEADER BACKGROUND ===============*/
-   const header = document.querySelector(".header");
-
-   const bgHeader = () => {
-      if (window.scrollY >= 50) {
-         header.classList.add("bg-header");
-      } else {
-         header.classList.remove("bg-header");
-      }
-   };
-
-   window.addEventListener("scroll", bgHeader);
-
-   /*=============== DARK / LIGHT THEME ===============*/
-   const themeButton = document.getElementById("theme-button");
-   const darkTheme = "dark-theme";
-   const iconTheme = "ri-sun-line";
-
-   const selectedTheme = localStorage.getItem("selected-theme");
-   const selectedIcon = localStorage.getItem("selected-icon");
-
-   /* Apply Saved Theme */
-   if (selectedTheme === "dark") {
-      document.body.classList.add(darkTheme);
-   }
-
-   if (selectedIcon === "ri-sun-line") {
-      themeButton.classList.add(iconTheme);
-   }
-
-   /* Theme Toggle */
-   if (themeButton) {
-
-      themeButton.addEventListener("click", () => {
-
-         document.body.classList.toggle(darkTheme);
-
-         themeButton.classList.toggle(iconTheme);
-
-         /* Save Theme */
-         const currentTheme =
-            document.body.classList.contains(darkTheme)
-               ? "dark"
-               : "light";
-
-         const currentIcon =
-            themeButton.classList.contains(iconTheme)
-               ? "ri-sun-line"
-               : "ri-moon-line";
-
-         localStorage.setItem("selected-theme", currentTheme);
-         localStorage.setItem("selected-icon", currentIcon);
-      });
-   }
-
-   /*=============== SCROLL TOP BUTTON ===============*/
-   const scrollTopBtn = document.getElementById("scroll-top");
-
-   const scrollUp = () => {
-
-      if (window.scrollY >= 350) {
-         scrollTopBtn.classList.add("show-scroll");
-      } else {
-         scrollTopBtn.classList.remove("show-scroll");
-      }
-   };
-
-   window.addEventListener("scroll", scrollUp);
-
-   /*=============== ACTIVE NAV LINK ===============*/
-   const sections = document.querySelectorAll("section[id]");
-
-   const scrollActive = () => {
-
-      const scrollY = window.pageYOffset;
-
-      sections.forEach(current => {
-
-         const sectionHeight = current.offsetHeight;
-         const sectionTop = current.offsetTop - 120;
-         const sectionId = current.getAttribute("id");
-
-         const navLink = document.querySelector(
-            `.nav__menu a[href*="${sectionId}"]`
-         );
-
-         if (navLink) {
-
-            if (
-               scrollY > sectionTop &&
-               scrollY <= sectionTop + sectionHeight
-            ) {
-               navLink.classList.add("active-link");
-            } else {
-               navLink.classList.remove("active-link");
-            }
-         }
-      });
-   };
-
-   window.addEventListener("scroll", scrollActive);
-
-   /*=============== SMOOTH SCROLL (with header offset) ===============*/
-   const headerOffset = 90;
-
-   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-      anchor.addEventListener("click", function (e) {
-
-         const href = this.getAttribute("href");
-
-         if (href === "#" || href.length < 2) return;
-
-         const target = document.querySelector(href);
-
-         if (target) {
-
-            e.preventDefault();
-
-            const top =
-               target.getBoundingClientRect().top +
-               window.pageYOffset -
-               headerOffset;
-
-            window.scrollTo({ top, behavior: "smooth" });
-         }
-      });
-   });
-
-   /*=============== SCROLL REVEAL ANIMATION ===============*/
-   const revealElements = document.querySelectorAll(
-      ".project-card, .stat-card, .timeline-item, .skill-group, .publication-card"
+   navToggle?.addEventListener("click", openMenu);
+   navClose?.addEventListener("click", closeMenu);
+   navMenu?.querySelectorAll(".nav__link").forEach(l =>
+      l.addEventListener("click", closeMenu)
    );
 
-   const revealOnScroll = () => {
+   /* ---------- Theme toggle ---------- */
+   const themeBtn = document.getElementById("theme-button");
+   const stored = localStorage.getItem("theme");
 
-      revealElements.forEach(element => {
+   if (stored === "dark") document.body.classList.add("dark");
 
-         const windowHeight = window.innerHeight;
-         const revealTop = element.getBoundingClientRect().top;
-         const revealPoint = 120;
+   themeBtn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem(
+         "theme",
+         document.body.classList.contains("dark") ? "dark" : "light"
+      );
+   });
 
-         if (revealTop < windowHeight - revealPoint) {
-            element.classList.add("active-reveal");
+   /* ---------- Header border on scroll ---------- */
+   const header = document.querySelector(".header");
+   const onScroll = () =>
+      header.classList.toggle("scrolled", window.scrollY > 10);
+   onScroll();
+   window.addEventListener("scroll", onScroll, { passive: true });
+
+   /* ---------- Reveal on scroll ---------- */
+   const revealEls = document.querySelectorAll("[data-reveal]");
+
+   if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+         (entries, obs) => {
+            entries.forEach((e, i) => {
+               if (e.isIntersecting) {
+                  // slight stagger for siblings
+                  e.target.style.transitionDelay = `${Math.min(i * 60, 180)}ms`;
+                  e.target.classList.add("in");
+                  obs.unobserve(e.target);
+               }
+            });
+         },
+         { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+      revealEls.forEach(el => io.observe(el));
+   } else {
+      revealEls.forEach(el => el.classList.add("in"));
+   }
+
+   /* ---------- Active nav link ---------- */
+   const sections = document.querySelectorAll("section[id]");
+   const links = document.querySelectorAll(".nav__link");
+
+   const setActive = () => {
+      const y = window.scrollY + 120;
+      sections.forEach(sec => {
+         const link = document.querySelector(
+            `.nav__link[href="#${sec.id}"]`
+         );
+         if (!link) return;
+         if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) {
+            links.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
          }
       });
    };
-
-   window.addEventListener("scroll", revealOnScroll);
-
-   revealOnScroll();
-
-   /*=============== PROJECT FILTERING ===============*/
-   const filterButtons = document.querySelectorAll(".filter-btn");
-   const projectCards = document.querySelectorAll(".project-card");
-
-   if (filterButtons.length > 0) {
-
-      filterButtons.forEach(button => {
-
-         button.addEventListener("click", () => {
-
-            const filterValue =
-               button.getAttribute("data-filter");
-
-            filterButtons.forEach(btn =>
-               btn.classList.remove("active")
-            );
-
-            button.classList.add("active");
-
-            projectCards.forEach(card => {
-
-               const category =
-                  card.getAttribute("data-category");
-
-               if (
-                  filterValue === "all" ||
-                  category.includes(filterValue)
-               ) {
-
-                  card.style.display = "block";
-
-                  setTimeout(() => {
-                     card.style.opacity = "1";
-                     card.style.transform = "translateY(0)";
-                  }, 100);
-
-               } else {
-
-                  card.style.opacity = "0";
-                  card.style.transform = "translateY(30px)";
-
-                  setTimeout(() => {
-                     card.style.display = "none";
-                  }, 300);
-               }
-            });
-         });
-      });
-   }
-
-   /*=============== TYPING EFFECT ===============*/
-   const typingElement =
-      document.querySelector(".hero-subtitle");
-
-   if (typingElement) {
-
-      const texts = [
-         "Full Stack Software Engineer",
-         "AI / ML Engineer",
-         "Cloud Developer",
-         "Backend Engineer"
-      ];
-
-      let textIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      const typeEffect = () => {
-
-         const currentText = texts[textIndex];
-
-         if (!isDeleting) {
-
-            typingElement.textContent =
-               currentText.substring(0, charIndex + 1);
-
-            charIndex++;
-
-            if (charIndex === currentText.length) {
-
-               isDeleting = true;
-
-               setTimeout(typeEffect, 1500);
-
-               return;
-            }
-
-         } else {
-
-            typingElement.textContent =
-               currentText.substring(0, charIndex - 1);
-
-            charIndex--;
-
-            if (charIndex === 0) {
-
-               isDeleting = false;
-
-               textIndex =
-                  (textIndex + 1) % texts.length;
-            }
-         }
-
-         setTimeout(
-            typeEffect,
-            isDeleting ? 50 : 100
-         );
-      };
-
-      typeEffect();
-   }
-
-   console.log("Portfolio Loaded Successfully 🚀");
+   window.addEventListener("scroll", setActive, { passive: true });
+   setActive();
 });
-

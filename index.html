@@ -5,14 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
    <!-- SEO -->
-   <meta
-      name="description"
-      content="Keerthana Devi Govindaraj - Full Stack Software Engineer specializing in cloud-native systems, scalable APIs, and AI-powered applications. MS Software Engineering @ Northeastern. Open to full-time SWE roles."
-   />
-   <meta
-      name="keywords"
-      content="Full Stack Developer, Software Engineer, React Developer, Cloud Engineer, AWS, AI Engineer, Portfolio, Keerthana Devi Govindaraj"
-   />
+   <meta name="description" content="Keerthana Devi Govindaraj - Full Stack Software Engineer specializing in cloud-native systems, scalable APIs, and AI-powered applications. MS Software Engineering @ Northeastern. Open to full-time SWE roles." />
+   <meta name="keywords" content="Full Stack Developer, Software Engineer, React, Cloud Engineer, AWS, AI Engineer, Keerthana Devi Govindaraj" />
    <meta name="author" content="Keerthana Devi Govindaraj" />
    <meta name="robots" content="index, follow" />
    <link rel="canonical" href="https://keerthanadevigportfolio.netlify.app/" />
@@ -23,785 +17,264 @@
    <meta property="og:type" content="website" />
    <meta property="og:url" content="https://keerthanadevigportfolio.netlify.app/" />
    <meta property="og:image" content="img/android-chrome-512x512.png" />
-
-   <!-- Twitter -->
    <meta name="twitter:card" content="summary_large_image" />
-   <meta name="twitter:title" content="Keerthana Devi Govindaraj | Full Stack Software Engineer" />
-   <meta name="twitter:description" content="Full Stack Software Engineer building cloud-native systems and AI-powered applications." />
 
    <!-- Favicon -->
    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png" />
    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-   <link rel="apple-touch-icon" href="img/android-chrome-512x512.png" />
 
-   <!-- Fonts (preconnect for speed) -->
+   <!-- Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-   <!-- Remix Icons -->
-   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
-   />
-
-   <!-- AOS Animation -->
-   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-   <!-- CSS -->
    <link rel="stylesheet" href="style.css" />
 
-   <title>Keerthana Devi Govindaraj | Full Stack Software Engineer | AI & Cloud</title>
+   <title>Keerthana Devi Govindaraj — Full Stack Software Engineer</title>
 </head>
 
 <body>
 
-   <!-- Background Animation -->
-   <div class="bg-animation"></div>
-
    <!-- HEADER -->
    <header class="header">
       <nav class="nav container">
-
-         <a href="#home" class="nav__logo">KG</a>
+         <a href="#home" class="nav__logo">KG<span class="dot">.</span></a>
 
          <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-               <i class="ri-close-line nav__close" id="nav-close"></i>
-
-               <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-               <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-               <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-               <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-               <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-               <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+               <i class="nav__close" id="nav-close">&times;</i>
+               <li><a href="#about" class="nav__link">About</a></li>
+               <li><a href="#work" class="nav__link">Work</a></li>
+               <li><a href="#projects" class="nav__link">Projects</a></li>
+               <li><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
          </div>
 
          <div class="nav__actions">
-            <i class="ri-moon-line change-theme" id="theme-button"></i>
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
+            <button class="change-theme" id="theme-button" aria-label="Toggle theme">◐</button>
+            <div class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+               <span></span><span></span>
             </div>
          </div>
-
       </nav>
    </header>
 
    <main>
 
    <!-- HERO -->
-   <section class="hero-section" id="home">
+   <section class="hero" id="home">
       <div class="container">
-         <div class="hero-content">
-
-            <div class="hero-text" data-aos="fade-right">
-
-               <div class="hero-badge">
-                  <span class="badge-dot"></span>
-                  Open to Full-Time Software Engineering Roles
-               </div>
-
-               <h1 class="hero-title">
-                  Hi, I'm
-                  <span class="gradient-text">Keerthana Devi G</span>
-               </h1>
-
-               <h2 class="hero-subtitle">Full Stack Software Engineer</h2>
-
-               <p class="hero-description">
-                  MS Software Engineering student at Northeastern University.
-                  I build scalable full-stack applications, cloud-native
-                  infrastructure on AWS, and AI-powered products end to end —
-                  from REST APIs and CI/CD pipelines to polished React
-                  frontends.
-               </p>
-
-               <div class="hero-stats">
-                  <div class="stat-item">
-                     <span class="stat-number">3+</span>
-                     <span class="stat-label">Internships</span>
-                  </div>
-                  <div class="stat-item">
-                     <span class="stat-number">6</span>
-                     <span class="stat-label">Shipped Projects</span>
-                  </div>
-                  <div class="stat-item">
-                     <span class="stat-number">3</span>
-                     <span class="stat-label">Companies</span>
-                  </div>
-               </div>
-
-               <div class="hero-buttons">
-                  <a href="#projects" class="btn btn-primary">
-                     <span>View Projects</span>
-                     <i class="ri-arrow-right-line"></i>
-                  </a>
-                  <a
-                     href="Keerthana_Devi_Govindaraj_Resume-SDE.pdf"
-                     target="_blank"
-                     rel="noopener"
-                     class="btn btn-secondary"
-                  >
-                     <i class="ri-file-download-line"></i>
-                     <span>Download Resume</span>
-                  </a>
-               </div>
-
-               <div class="social-links">
-                  <a
-                     href="https://github.com/KeerthanaDeviGovindaraj"
-                     target="_blank"
-                     rel="noopener"
-                     class="social-link"
-                     aria-label="GitHub"
-                  ><i class="ri-github-fill"></i></a>
-                  <a
-                     href="https://www.linkedin.com/in/keerthanadevig28062002/"
-                     target="_blank"
-                     rel="noopener"
-                     class="social-link"
-                     aria-label="LinkedIn"
-                  ><i class="ri-linkedin-box-fill"></i></a>
-                  <a
-                     href="mailto:govindaraj.ke@northeastern.edu"
-                     class="social-link"
-                     aria-label="Email"
-                  ><i class="ri-mail-fill"></i></a>
-               </div>
-
-            </div>
-
-            <!-- HERO VISUAL -->
-            <div class="hero-visual" data-aos="fade-left">
-               <div class="floating-card card-1">
-                  <i class="ri-code-s-slash-line"></i><span>Full Stack</span>
-               </div>
-               <div class="floating-card card-2">
-                  <i class="ri-cloud-line"></i><span>Cloud / AWS</span>
-               </div>
-               <div class="floating-card card-3">
-                  <i class="ri-brain-line"></i><span>AI / ML</span>
-               </div>
-               <div class="floating-card card-4">
-                  <i class="ri-database-2-line"></i><span>Databases</span>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </section>
-
-   <!-- ABOUT -->
-   <section class="about-section" id="about">
-      <div class="container">
-         <h2 class="section-title" data-aos="fade-up">About Me</h2>
-
-         <div class="about-content">
-            <div class="about-text" data-aos="fade-up">
-               <p>
-                  I'm a full-stack engineer who enjoys building systems
-                  end to end — designing REST APIs and cloud infrastructure,
-                  then shipping the frontend experiences that sit on top of
-                  them. I care about software that is secure, scalable, and
-                  production-ready.
-               </p>
-               <p>
-                  Currently pursuing my MS in Software Engineering Systems at
-                  Northeastern University, with hands-on experience across
-                  full-stack development, AWS cloud infrastructure, and
-                  machine learning from three internships and a set of
-                  shipped projects.
-               </p>
-
-               <div class="about-highlights">
-                  <div class="highlight-item">
-                     <i class="ri-graduation-cap-line"></i>
-                     <div>
-                        <h4>MS Software Engineering</h4>
-                        <span>Northeastern University · 2025–2027</span>
-                     </div>
-                  </div>
-                  <div class="highlight-item">
-                     <i class="ri-map-pin-line"></i>
-                     <div>
-                        <h4>Based in Boston, MA</h4>
-                        <span>Open to relocation & remote</span>
-                     </div>
-                  </div>
-                  <div class="highlight-item">
-                     <i class="ri-briefcase-line"></i>
-                     <div>
-                        <h4>Open to Full-Time Roles</h4>
-                        <span>SWE · Full Stack · Cloud · Backend</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <!-- SKILLS -->
-   <section class="skills-section" id="skills">
-      <div class="container">
-         <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
-         <p class="skills-description" data-aos="fade-up">
-            Technologies I use to build scalable cloud-native and AI-powered
-            applications.
+         <span class="eyebrow" data-reveal>Software Engineer — Boston, MA</span>
+         <h1 class="hero__title" data-reveal>
+            Keerthana<br/>Devi <em>Govindaraj</em>
+         </h1>
+         <p class="hero__lead" data-reveal>
+            I build systems end to end — cloud-native infrastructure, scalable
+            APIs, and AI-powered products — with a bias toward the secure,
+            scalable, and genuinely useful.
          </p>
 
-         <div class="skills-grid">
-
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-code-s-slash-line"></i></div>
-               <h3>Languages</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">Java</span>
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">JavaScript</span>
-                  <span class="skill-tag">TypeScript</span>
-                  <span class="skill-tag">HTML5</span>
-                  <span class="skill-tag">CSS3</span>
-               </div>
+         <div class="hero__meta" data-reveal>
+            <a href="Keerthana_Devi_Govindaraj_Resume-SDE.pdf" target="_blank" rel="noopener" class="btn">Résumé &rarr;</a>
+            <div class="hero__links">
+               <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" rel="noopener">GitHub</a>
+               <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" rel="noopener">LinkedIn</a>
+               <a href="mailto:govindaraj.ke@northeastern.edu">Email</a>
             </div>
+         </div>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-layout-line"></i></div>
-               <h3>Frontend Engineering</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">React.js</span>
-                  <span class="skill-tag">Next.js</span>
-                  <span class="skill-tag">Redux</span>
-                  <span class="skill-tag">Angular</span>
-                  <span class="skill-tag">Material-UI</span>
-                  <span class="skill-tag">Tailwind CSS</span>
-                  <span class="skill-tag">Responsive UI</span>
-                  <span class="skill-tag">State Management</span>
-               </div>
-            </div>
+         <div class="hero__status" data-reveal>
+            <span class="pulse"></span> Open to full-time Software Engineering roles
+         </div>
+      </div>
+   </section>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-server-line"></i></div>
-               <h3>Backend & APIs</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">Spring Boot</span>
-                  <span class="skill-tag">FastAPI</span>
-                  <span class="skill-tag">Django</span>
-                  <span class="skill-tag">Node.js</span>
-                  <span class="skill-tag">Express.js</span>
-                  <span class="skill-tag">REST APIs</span>
-                  <span class="skill-tag">Microservices</span>
-                  <span class="skill-tag">JWT / RBAC</span>
-               </div>
-            </div>
+   <div class="rule container"></div>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-cloud-line"></i></div>
-               <h3>Cloud Infrastructure & DevOps</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">AWS EC2</span>
-                  <span class="skill-tag">RDS</span>
-                  <span class="skill-tag">S3</span>
-                  <span class="skill-tag">Lambda</span>
-                  <span class="skill-tag">DynamoDB</span>
-                  <span class="skill-tag">IAM</span>
-                  <span class="skill-tag">CloudWatch</span>
-                  <span class="skill-tag">Route53</span>
-                  <span class="skill-tag">ALB</span>
-                  <span class="skill-tag">Terraform</span>
-                  <span class="skill-tag">GitHub Actions</span>
-                  <span class="skill-tag">CI/CD</span>
-                  <span class="skill-tag">Docker</span>
-                  <span class="skill-tag">Serverless</span>
-                  <span class="skill-tag">Auto Scaling</span>
-               </div>
-            </div>
+   <!-- ABOUT -->
+   <section class="about" id="about">
+      <div class="container grid-2">
+         <div class="section-label" data-reveal><span>01</span> About</div>
+         <div class="about__body">
+            <p class="lead" data-reveal>
+               I'm a full-stack engineer who enjoys building systems end to end,
+               from designing REST APIs and cloud infrastructure to shipping
+               polished frontend experiences.
+            </p>
+            <p data-reveal>
+               Currently pursuing my MS in Software Engineering Systems at
+               Northeastern University, with hands-on experience across
+               full-stack development, AWS cloud infrastructure, and machine
+               learning from three internships and a set of shipped projects.
+            </p>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-database-2-line"></i></div>
-               <h3>Databases & Distributed Systems</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">PostgreSQL</span>
-                  <span class="skill-tag">MySQL</span>
-                  <span class="skill-tag">MongoDB</span>
-                  <span class="skill-tag">DynamoDB</span>
-                  <span class="skill-tag">SQLAlchemy</span>
-                  <span class="skill-tag">Query Optimization</span>
-                  <span class="skill-tag">Data Modeling</span>
-                  <span class="skill-tag">Distributed Systems</span>
-               </div>
-            </div>
+            <dl class="facts" data-reveal>
+               <div><dt>Education</dt><dd>M.S. Software Engineering Systems, Northeastern University (2025–2027)<br/>B.Tech, Electronics &amp; Computer Engineering, SRM (2020–2024)</dd></div>
+               <div><dt>Based in</dt><dd>Boston, MA — open to relocation &amp; remote</dd></div>
+               <div><dt>Focus</dt><dd>Full Stack · Cloud / AWS · Distributed Systems · AI</dd></div>
+            </dl>
+         </div>
+      </div>
+   </section>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-brain-line"></i></div>
-               <h3>Machine Learning & AI</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">TensorFlow</span>
-                  <span class="skill-tag">PyTorch</span>
-                  <span class="skill-tag">OpenCV</span>
-                  <span class="skill-tag">NLP</span>
-                  <span class="skill-tag">LLM Integration</span>
-                  <span class="skill-tag">Gemini API</span>
-               </div>
-            </div>
+   <div class="rule container"></div>
 
-            <div class="skill-category" data-aos="fade-up">
-               <div class="category-icon"><i class="ri-tools-line"></i></div>
-               <h3>Engineering Practices</h3>
-               <div class="skill-tags">
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">Agile / SDLC</span>
-                  <span class="skill-tag">OOP</span>
-                  <span class="skill-tag">System Design</span>
-                  <span class="skill-tag">Performance Optimization</span>
-                  <span class="skill-tag">API Testing</span>
+   <!-- SKILLS -->
+   <section class="skills" id="skills">
+      <div class="container grid-2">
+         <div class="section-label" data-reveal><span>02</span> Stack</div>
+         <div class="skills__body">
+            <div class="skill-row" data-reveal><span class="k">Languages</span><span class="v">Java · Python · JavaScript · TypeScript · HTML/CSS</span></div>
+            <div class="skill-row" data-reveal><span class="k">Frontend</span><span class="v">React · Next.js · Redux · Angular · Tailwind · Material-UI</span></div>
+            <div class="skill-row" data-reveal><span class="k">Backend</span><span class="v">Spring Boot · FastAPI · Django · Node.js · Express · REST · Microservices</span></div>
+            <div class="skill-row" data-reveal><span class="k">Cloud / DevOps</span><span class="v">AWS (EC2, RDS, S3, Lambda, DynamoDB, IAM, Route53, ALB) · Terraform · Docker · GitHub Actions · CI/CD</span></div>
+            <div class="skill-row" data-reveal><span class="k">Data</span><span class="v">PostgreSQL · MySQL · MongoDB · DynamoDB · SQLAlchemy</span></div>
+            <div class="skill-row" data-reveal><span class="k">AI / ML</span><span class="v">TensorFlow · PyTorch · OpenCV · NLP · LLM Integration · Gemini / OpenAI</span></div>
+         </div>
+      </div>
+   </section>
+
+   <div class="rule container"></div>
+
+   <!-- WORK / EXPERIENCE -->
+   <section class="work" id="work">
+      <div class="container grid-2">
+         <div class="section-label" data-reveal><span>03</span> Work</div>
+         <div class="work__body">
+
+            <article class="xp" data-reveal>
+               <div class="xp__head">
+                  <h3>Product Analyst</h3>
+                  <span class="xp__date">2026 — Present</span>
                </div>
-            </div>
+               <span class="xp__org">Linedata · Boston, MA</span>
+               <p>Modernizing Linedata's Web Admin module with product and engineering teams to improve the platform's architecture, usability, and maintainability across asset-management software.</p>
+            </article>
+
+            <article class="xp" data-reveal>
+               <div class="xp__head">
+                  <h3>Software Engineer</h3>
+                  <span class="xp__date">Jan — Aug 2025</span>
+               </div>
+               <span class="xp__org">FITA Academy · Chennai, India</span>
+               <p>Led end-to-end delivery of a full-stack Student Management System for 500+ students. Built 20+ secure REST APIs with Spring Boot microservices, JWT/RBAC, and CI/CD, reaching sub-100ms p95 and lifting release velocity 30%.</p>
+            </article>
+
+            <article class="xp" data-reveal>
+               <div class="xp__head">
+                  <h3>Machine Learning Engineer</h3>
+                  <span class="xp__date">Jan — Mar 2023</span>
+               </div>
+               <span class="xp__org">Aican Automate · Chennai, India</span>
+               <p>Built NLP-based support-ticket classification (TF-IDF, Logistic Regression, Random Forest) at 87% precision, and productionized reproducible, Docker-based training pipelines used by 5+ engineers.</p>
+            </article>
 
          </div>
       </div>
    </section>
 
-   <!-- EXPERIENCE -->
-   <section class="experience-section" id="experience">
-      <div class="container">
-         <h2 class="section-title" data-aos="fade-up">Experience</h2>
-
-         <div class="timeline">
-
-            <div class="timeline-item" data-aos="fade-up">
-               <div class="timeline-marker"></div>
-               <div class="timeline-content">
-                  <div class="timeline-head">
-                     <div>
-                        <h3>Product Analyst</h3>
-                        <span class="timeline-company">Linedata</span>
-                     </div>
-                     <span class="timeline-date">2026 – Present</span>
-                  </div>
-                  <span class="timeline-location"><i class="ri-map-pin-line"></i> Boston, MA</span>
-                  <ul class="timeline-points">
-                     <li>Contributing to the modernization of Linedata's Web Admin module, collaborating with product and engineering teams to improve the platform's architecture, usability, and maintainability.</li>
-                     <li>Supporting product development and Agile initiatives across asset-management software, working with product managers, R&D, and Scrum teams to drive feature and platform improvements.</li>
-                  </ul>
-                  <div class="timeline-tags">
-                     <span>Product</span><span>Agile / Scrum</span><span>Asset Management</span>
-                  </div>
-               </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up">
-               <div class="timeline-marker"></div>
-               <div class="timeline-content">
-                  <div class="timeline-head">
-                     <div>
-                        <h3>Software Engineer</h3>
-                        <span class="timeline-company">FITA Academy</span>
-                     </div>
-                     <span class="timeline-date">Jan 2025 – Aug 2025</span>
-                  </div>
-                  <span class="timeline-location"><i class="ri-map-pin-line"></i> Chennai, India</span>
-                  <ul class="timeline-points">
-                     <li>Led end-to-end development and deployment of a full-stack Student Management System serving <strong>500+ students</strong>, automating enrollment, attendance, academic reporting, and progress tracking, replacing spreadsheet-based operations.</li>
-                     <li>Designed and optimized scalable Java Spring Boot microservices and React UIs — <strong>20+ secure REST APIs</strong> with JWT auth, RBAC, MongoDB, and CI/CD — achieving <strong>sub-100ms p95</strong> response times and improving release velocity by <strong>30%</strong>.</li>
-                  </ul>
-                  <div class="timeline-tags">
-                     <span>Java</span><span>Spring Boot</span><span>React</span>
-                     <span>MongoDB</span><span>JWT / RBAC</span><span>CI/CD</span>
-                  </div>
-               </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-up">
-               <div class="timeline-marker"></div>
-               <div class="timeline-content">
-                  <div class="timeline-head">
-                     <div>
-                        <h3>Machine Learning Engineer</h3>
-                        <span class="timeline-company">Aican Automate</span>
-                     </div>
-                     <span class="timeline-date">Jan 2023 – Mar 2023</span>
-                  </div>
-                  <span class="timeline-location"><i class="ri-map-pin-line"></i> Chennai, India</span>
-                  <ul class="timeline-points">
-                     <li>Built and evaluated NLP-based support-ticket classification systems using TF-IDF, N-gram feature engineering, Logistic Regression, and Random Forest — achieving <strong>87% precision</strong> and significantly reducing manual triage effort.</li>
-                     <li>Productionized ML workflows with Docker-based containerization, creating reproducible training and deployment pipelines that let <strong>5+ engineers</strong> retrain, validate, and deploy models with minimal overhead.</li>
-                  </ul>
-                  <div class="timeline-tags">
-                     <span>Python</span><span>NLP</span><span>scikit-learn</span><span>Docker</span>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </section>
-
-   <!-- EDUCATION -->
-   <section class="education-section" id="education">
-      <div class="container">
-         <h2 class="section-title" data-aos="fade-up">Education</h2>
-
-         <div class="education-grid">
-
-            <div class="education-card" data-aos="fade-up">
-               <div class="education-icon"><i class="ri-graduation-cap-line"></i></div>
-               <div class="education-body">
-                  <h3>M.S. Software Engineering Systems</h3>
-                  <span class="education-school">Northeastern University · Boston, MA</span>
-                  <span class="education-date">Sep 2025 – Dec 2027</span>
-               </div>
-            </div>
-
-            <div class="education-card" data-aos="fade-up">
-               <div class="education-icon"><i class="ri-building-2-line"></i></div>
-               <div class="education-body">
-                  <h3>B.Tech, Electronics &amp; Computer Engineering</h3>
-                  <span class="education-school">SRM Institute of Science and Technology · Chennai, India</span>
-                  <span class="education-date">Oct 2020 – 2024</span>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </section>
+   <div class="rule container"></div>
 
    <!-- PROJECTS -->
-   <section class="featured-projects" id="projects">
+   <section class="projects" id="projects">
       <div class="container">
-         <div class="section-header">
-            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-            <p class="skills-description" data-aos="fade-up">
-               A selection of full-stack, cloud, and AI systems I've shipped.
-            </p>
-         </div>
+         <div class="section-label projects__label" data-reveal><span>04</span> Selected Projects</div>
 
-         <div class="projects-showcase">
+         <ol class="proj-list">
 
-            <!-- PROJECT: SchemaLens -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">🔎</span>
-                     <span class="project-badge">Full Stack · Live Demo</span>
-                  </div>
-                  <h3>SchemaLens — Make Legacy PostgreSQL Databases Understandable</h3>
-                  <p>
-                     Point it at a Postgres database and get searchable docs, a
-                     map of which functions read and write which tables (parsed
-                     from PL/pgSQL with Postgres's own parser), AI explanations
-                     audited against the static analysis, and an MCP server so
-                     AI assistants write correct SQL. Accuracy is measured
-                     against a hand-labeled benchmark and gated in CI. Only
-                     system catalogs are read, never row data.
-                  </p>
-                  <div class="project-tech">
-                     <span>Python</span><span>FastAPI</span><span>React</span>
-                     <span>TypeScript</span><span>PostgreSQL</span><span>pglast</span><span>MCP</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://web-sigma-six-99.vercel.app"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-external-link-line"></i> Live Demo
-                     </a>
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/schemalens"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary"
-                     >
-                        <i class="ri-github-line"></i> Code
-                     </a>
-                  </div>
+            <li class="proj" data-reveal>
+               <span class="proj__no">01</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">HeatSink</h3>
+                  <p class="proj__desc">A full-stack screening tool mapping coastal temperatures and thermal-plume impact to find where a seawater-cooled AI data center does least harm to the ocean. Tested with unit + property-based tests and CI.</p>
+                  <span class="proj__tech">TypeScript · React · Vite · Vitest</span>
                </div>
-            </div>
-
-            <!-- PROJECT 1 -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">🌊</span>
-                     <span class="project-badge">Full Stack · Live Demo</span>
-                  </div>
-                  <h3>HeatSink — Smart Siting for Seawater-Cooled Data Centers</h3>
-                  <p>
-                     A screening tool that maps where a seawater-cooled AI
-                     data center's heat does the least harm to the ocean,
-                     before it's built. Interactive coastal temperature maps,
-                     configurable thermal-plume modeling, and plain-English
-                     risk verdicts for town planners and state reviewers.
-                     Built in TypeScript with unit + property-based tests.
-                  </p>
-                  <div class="project-tech">
-                     <span>TypeScript</span><span>React</span><span>Vite</span>
-                     <span>Vitest</span><span>Geospatial</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://keerthanadevigovindaraj.github.io/HeatSink/"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-external-link-line"></i> Live Demo
-                     </a>
-                     <a
-                        href="https://youtu.be/4AGqKQUWBaI"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary"
-                     >
-                        <i class="ri-play-circle-line"></i> Demo Video
-                     </a>
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/HeatSink"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary"
-                     >
-                        <i class="ri-github-line"></i> Code
-                     </a>
-                  </div>
+               <div class="proj__links">
+                  <a href="https://keerthanadevigovindaraj.github.io/HeatSink/" target="_blank" rel="noopener">Live</a>
+                  <a href="https://youtu.be/4AGqKQUWBaI" target="_blank" rel="noopener">Video</a>
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/HeatSink" target="_blank" rel="noopener">Code</a>
                </div>
-            </div>
+            </li>
 
-            <!-- PROJECT 2 -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">☁️</span>
-                     <span class="project-badge">Cloud / IaC</span>
-                  </div>
-                  <h3>Cloud-Native Serverless Web Application</h3>
-                  <p>
-                     Production-style AWS infrastructure provisioned with
-                     3,000+ lines of Terraform across VPCs, EC2 Auto Scaling,
-                     RDS Multi-AZ, ALB, and Route53. Serverless verification
-                     workflow using SNS → Lambda → DynamoDB with token
-                     expiration and deduplication, secured with IAM, KMS, and
-                     Secrets Manager.
-                  </p>
-                  <div class="project-tech">
-                     <span>AWS</span><span>Terraform</span><span>FastAPI</span>
-                     <span>PostgreSQL</span><span>GitHub Actions</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/tf-infra-fork"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-terminal-box-line"></i> Infra (Terraform)
-                     </a>
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/webapp-FORK"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary"
-                     >
-                        <i class="ri-github-line"></i> App Code
-                     </a>
-                  </div>
+            <li class="proj" data-reveal>
+               <span class="proj__no">02</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">Cloud-Native Serverless App</h3>
+                  <p class="proj__desc">Production-style AWS infrastructure in 3,000+ lines of Terraform — VPCs, EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53 — with an SNS→Lambda→DynamoDB verification pipeline and secure-by-default IAM, KMS, and Secrets Manager.</p>
+                  <span class="proj__tech">Python · FastAPI · Terraform · AWS</span>
                </div>
-            </div>
-
-            <!-- PROJECT 3 -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">⚽</span>
-                     <span class="project-badge">AI · Live Demo</span>
-                  </div>
-                  <h3>GLIMPSE — AI Sports Commentary Platform</h3>
-                  <p>
-                     AI-powered platform that turns live match events into
-                     real-time natural-language commentary via the Gemini API,
-                     cutting manual content generation by 80%. React/Redux
-                     frontend with 15+ reusable components and Node.js backend
-                     services for match ingestion, sessions, and commentary
-                     history.
-                  </p>
-                  <div class="project-tech">
-                     <span>React.js</span><span>Redux</span><span>Node.js</span>
-                     <span>MongoDB</span><span>Gemini API</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://glimpse-kappa.vercel.app/"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-external-link-line"></i> Live Demo
-                     </a>
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/GLIMPSE"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary"
-                     >
-                        <i class="ri-github-line"></i> Code
-                     </a>
-                  </div>
+               <div class="proj__links">
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/tf-infra-fork" target="_blank" rel="noopener">Infra</a>
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/webapp-FORK" target="_blank" rel="noopener">App</a>
                </div>
-            </div>
+            </li>
 
-            <!-- PROJECT 4 -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">📧</span>
-                     <span class="project-badge">AI · Full Stack</span>
-                  </div>
-                  <h3>InboxTriage - AI Email Triage</h3>
-                  <p>
-                     An AI tool that triages client emails for small
-                     accounting and bookkeeping firms. Paste an email and get
-                     a category, urgency level, extracted details, and a
-                     ready-to-send draft reply, powered by the OpenAI API. Built
-                     with Next.js, TypeScript, and a tested Zustand state layer.
-                  </p>
-                  <div class="project-tech">
-                     <span>Next.js</span><span>TypeScript</span>
-                     <span>Tailwind CSS</span><span>Zustand</span><span>Vitest</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/inboxtriage"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-github-line"></i> View Code
-                     </a>
-                  </div>
+            <li class="proj" data-reveal>
+               <span class="proj__no">03</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">GLIMPSE</h3>
+                  <p class="proj__desc">AI sports-commentary platform that turns live match events into real-time natural-language commentary via the Gemini API, cutting manual effort 80%. Built with a team of 4; led the React/Redux frontend.</p>
+                  <span class="proj__tech">React · Redux · Node.js · MongoDB · Gemini API</span>
                </div>
-            </div>
-
-            <!-- PROJECT 5 -->
-            <div class="project-card-large" data-aos="fade-up">
-               <div class="project-content">
-                  <div class="project-top">
-                     <span class="project-emoji">🧠</span>
-                     <span class="project-badge">ML · Published</span>
-                  </div>
-                  <h3>Eye-Tracking Based ASD Diagnosis</h3>
-                  <p>
-                     Deep-learning pipeline using CNNs, transfer learning, and
-                     PCA to classify ASD risk across 10,000+ eye-tracking
-                     samples, improving accuracy by 20% over baseline. Built an
-                     OpenCV preprocessing pipeline that converted 10,000+
-                     variable-frame-rate recordings into model-ready tensors.
-                     Published as a research paper.
-                  </p>
-                  <div class="project-tech">
-                     <span>Python</span><span>TensorFlow</span><span>CNN</span>
-                     <span>PCA</span><span>OpenCV</span>
-                  </div>
-                  <div class="project-actions">
-                     <a
-                        href="https://github.com/KeerthanaDeviGovindaraj/Autism_Eye"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                     >
-                        <i class="ri-github-line"></i> View Code
-                     </a>
-                  </div>
+               <div class="proj__links">
+                  <a href="https://glimpse-kappa.vercel.app/" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/GLIMPSE" target="_blank" rel="noopener">Code</a>
                </div>
-            </div>
+            </li>
 
-         </div>
+            <li class="proj" data-reveal>
+               <span class="proj__no">04</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">InboxTriage</h3>
+                  <p class="proj__desc">An AI tool that triages client emails for accounting firms — returning category, urgency, extracted details, and a ready-to-send draft reply via the OpenAI API. Tested Zustand state layer with Vitest.</p>
+                  <span class="proj__tech">Next.js · TypeScript · Tailwind · Zustand</span>
+               </div>
+               <div class="proj__links">
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/inboxtriage" target="_blank" rel="noopener">Code</a>
+               </div>
+            </li>
+
+            <li class="proj" data-reveal>
+               <span class="proj__no">05</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">Eye-Tracking ASD Diagnosis <span class="tag">Published</span></h3>
+                  <p class="proj__desc">CNN + PCA pipeline classifying ASD risk across 10,000+ eye-tracking samples, improving accuracy 20% over baseline with transfer learning. Published as a research paper.</p>
+                  <span class="proj__tech">Python · TensorFlow · CNN · PCA · OpenCV</span>
+               </div>
+               <div class="proj__links">
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/Autism_Eye" target="_blank" rel="noopener">Code</a>
+               </div>
+            </li>
+
+         </ol>
       </div>
    </section>
 
+   <div class="rule container"></div>
+
    <!-- CONTACT -->
-   <section class="contact-section" id="contact">
+   <section class="contact" id="contact">
       <div class="container">
-         <div class="contact-content" data-aos="fade-up">
-            <h2 class="section-title">Let's Connect</h2>
-            <p>
-               I'm actively looking for full-time Software Engineering, Full
-               Stack, and Cloud Engineering roles. If you're hiring or just
-               want to talk shop, I'd love to hear from you.
-            </p>
-            <div class="contact-buttons">
-               <a href="mailto:govindaraj.ke@northeastern.edu" class="btn btn-primary">
-                  <i class="ri-send-plane-line"></i> Email Me
-               </a>
-               <a
-                  href="https://www.linkedin.com/in/keerthanadevig28062002/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn btn-secondary"
-               >
-                  <i class="ri-linkedin-box-fill"></i> LinkedIn
-               </a>
-            </div>
+         <div class="section-label" data-reveal><span>05</span> Contact</div>
+         <h2 class="contact__title" data-reveal>Let's build<br/>something <em>good.</em></h2>
+         <p class="contact__lead" data-reveal>Open to full-time Software Engineering, Full Stack, and Cloud roles. If you're hiring — or just want to talk shop — reach out.</p>
+         <a href="mailto:govindaraj.ke@northeastern.edu" class="contact__email" data-reveal>govindaraj.ke@northeastern.edu &rarr;</a>
+         <div class="hero__links contact__links" data-reveal>
+            <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" rel="noopener">LinkedIn</a>
          </div>
       </div>
    </section>
 
    </main>
 
-   <!-- FOOTER -->
    <footer class="footer">
-      <div class="container">
-         <div class="footer-content">
-
-            <div class="footer-brand">
-               <a href="#home" class="footer-logo">KG</a>
-               <p>Building scalable applications and intelligent systems.</p>
-               <div class="social-links">
-                  <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                  <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                  <a href="mailto:govindaraj.ke@northeastern.edu" class="social-link" aria-label="Email"><i class="ri-mail-fill"></i></a>
-               </div>
-            </div>
-
-            <div class="footer-column">
-               <h4>Navigation</h4>
-               <a href="#home">Home</a>
-               <a href="#about">About</a>
-               <a href="#skills">Skills</a>
-               <a href="#projects">Projects</a>
-               <a href="#contact">Contact</a>
-            </div>
-
-            <div class="footer-column">
-               <h4>Connect</h4>
-               <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" rel="noopener">GitHub</a>
-               <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" rel="noopener">LinkedIn</a>
-               <a href="Keerthana_Devi_Govindaraj_Resume-SDE.pdf" target="_blank" rel="noopener">Resume</a>
-            </div>
-
-         </div>
-
-         <div class="footer-bottom">
-            <p>© 2026 Keerthana Devi Govindaraj. All rights reserved.</p>
-         </div>
+      <div class="container footer__row">
+         <span>© 2026 Keerthana Devi Govindaraj</span>
+         <a href="#home">Back to top &uarr;</a>
       </div>
    </footer>
 
-   <!-- SCROLL TOP -->
-   <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
-      <i class="ri-arrow-up-line"></i>
-   </a>
-
-   <!-- AOS JS -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>
-      AOS.init({ duration: 900, once: true, offset: 80 });
-   </script>
-
-   <!-- JS -->
    <script src="script.js"></script>
-
 </body>
 </html>
