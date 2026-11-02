@@ -30,10 +30,12 @@
 
    <link rel="stylesheet" href="style.css" />
 
-   <title>Keerthana Devi Govindaraj — Full Stack Software Engineer</title>
+   <title>Keerthana Devi Govindaraj · Full Stack Software Engineer</title>
 </head>
 
 <body>
+
+   <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 
    <!-- HEADER -->
    <header class="header">
@@ -64,14 +66,15 @@
    <!-- HERO -->
    <section class="hero" id="home">
       <div class="container">
-         <span class="eyebrow" data-reveal>Software Engineer — Boston, MA</span>
+         <span class="eyebrow" data-reveal>Software Engineer, based in Boston</span>
          <h1 class="hero__title" data-reveal>
             Keerthana<br/>Devi <em>Govindaraj</em>
          </h1>
          <p class="hero__lead" data-reveal>
-            I build systems end to end — cloud-native infrastructure, scalable
-            APIs, and AI-powered products — with a bias toward the secure,
-            scalable, and genuinely useful.
+            I like building the whole thing. The cloud infrastructure
+            underneath, the APIs in the middle, and the interface people
+            actually touch. My favorite work is the kind that's quietly
+            reliable.
          </p>
 
          <div class="hero__meta" data-reveal>
@@ -86,6 +89,12 @@
          <div class="hero__status" data-reveal>
             <span class="pulse"></span> Open to full-time Software Engineering roles
          </div>
+
+         <p class="hero__currently" data-reveal>
+            <span class="currently__k">Currently</span>
+            building cloud-native side projects, reading about distributed
+            systems, and learning one new AWS service a week.
+         </p>
       </div>
    </section>
 
@@ -97,20 +106,21 @@
          <div class="section-label" data-reveal><span>01</span> About</div>
          <div class="about__body">
             <p class="lead" data-reveal>
-               I'm a full-stack engineer who enjoys building systems end to end,
-               from designing REST APIs and cloud infrastructure to shipping
-               polished frontend experiences.
+               I'm happiest when a project touches every layer. There's
+               something satisfying about tracing a request from a React click
+               all the way down to the Terraform that provisioned the database.
             </p>
             <p data-reveal>
-               Currently pursuing my MS in Software Engineering Systems at
-               Northeastern University, with hands-on experience across
-               full-stack development, AWS cloud infrastructure, and machine
-               learning from three internships and a set of shipped projects.
+               Right now I'm doing my master's in Software Engineering Systems
+               at Northeastern. Before that, three internships taught me how
+               real teams ship software: one in full-stack product, one in
+               cloud infrastructure, and one in machine learning. Each one left
+               me a little more opinionated about doing things well.
             </p>
 
             <dl class="facts" data-reveal>
-               <div><dt>Education</dt><dd>M.S. Software Engineering Systems, Northeastern University (2025–2027)<br/>B.Tech, Electronics &amp; Computer Engineering, SRM (2020–2024)</dd></div>
-               <div><dt>Based in</dt><dd>Boston, MA — open to relocation &amp; remote</dd></div>
+               <div><dt>Education</dt><dd>M.S. Software Engineering Systems, Northeastern University (2025 to 2027)<br/>B.Tech, Electronics &amp; Computer Engineering, SRM (2020 to 2024)</dd></div>
+               <div><dt>Based in</dt><dd>Boston, MA. Happy to relocate or work remote.</dd></div>
                <div><dt>Focus</dt><dd>Full Stack · Cloud / AWS · Distributed Systems · AI</dd></div>
             </dl>
          </div>
@@ -145,7 +155,7 @@
             <article class="xp" data-reveal>
                <div class="xp__head">
                   <h3>Product Analyst</h3>
-                  <span class="xp__date">2026 — Present</span>
+                  <span class="xp__date">2026 to now</span>
                </div>
                <span class="xp__org">Linedata · Boston, MA</span>
                <p>Modernizing Linedata's Web Admin module with product and engineering teams to improve the platform's architecture, usability, and maintainability across asset-management software.</p>
@@ -154,7 +164,7 @@
             <article class="xp" data-reveal>
                <div class="xp__head">
                   <h3>Software Engineer</h3>
-                  <span class="xp__date">Jan — Aug 2025</span>
+                  <span class="xp__date">Jan to Aug 2025</span>
                </div>
                <span class="xp__org">FITA Academy · Chennai, India</span>
                <p>Led end-to-end delivery of a full-stack Student Management System for 500+ students. Built 20+ secure REST APIs with Spring Boot microservices, JWT/RBAC, and CI/CD, reaching sub-100ms p95 and lifting release velocity 30%.</p>
@@ -163,7 +173,7 @@
             <article class="xp" data-reveal>
                <div class="xp__head">
                   <h3>Machine Learning Engineer</h3>
-                  <span class="xp__date">Jan — Mar 2023</span>
+                  <span class="xp__date">Jan to Mar 2023</span>
                </div>
                <span class="xp__org">Aican Automate · Chennai, India</span>
                <p>Built NLP-based support-ticket classification (TF-IDF, Logistic Regression, Random Forest) at 87% precision, and productionized reproducible, Docker-based training pipelines used by 5+ engineers.</p>
@@ -186,7 +196,7 @@
                <span class="proj__no">01</span>
                <div class="proj__main">
                   <h3 class="proj__title">HeatSink</h3>
-                  <p class="proj__desc">A full-stack screening tool mapping coastal temperatures and thermal-plume impact to find where a seawater-cooled AI data center does least harm to the ocean. Tested with unit + property-based tests and CI.</p>
+                  <p class="proj__desc">A screening tool that answers one question: if you cooled an AI data center with seawater, where would its heat do the least harm to the ocean? It maps coastal temperatures, models the thermal plume, and gives planners a plain-English read. Covered by unit and property-based tests.</p>
                   <span class="proj__tech">TypeScript · React · Vite · Vitest</span>
                </div>
                <div class="proj__links">
@@ -200,7 +210,7 @@
                <span class="proj__no">02</span>
                <div class="proj__main">
                   <h3 class="proj__title">Cloud-Native Serverless App</h3>
-                  <p class="proj__desc">Production-style AWS infrastructure in 3,000+ lines of Terraform — VPCs, EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53 — with an SNS→Lambda→DynamoDB verification pipeline and secure-by-default IAM, KMS, and Secrets Manager.</p>
+                  <p class="proj__desc">Production-style AWS infrastructure in 3,000+ lines of Terraform (VPCs, EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53), plus an SNS to Lambda to DynamoDB verification pipeline and secure-by-default IAM, KMS, and Secrets Manager.</p>
                   <span class="proj__tech">Python · FastAPI · Terraform · AWS</span>
                </div>
                <div class="proj__links">
@@ -226,7 +236,7 @@
                <span class="proj__no">04</span>
                <div class="proj__main">
                   <h3 class="proj__title">InboxTriage</h3>
-                  <p class="proj__desc">An AI tool that triages client emails for accounting firms — returning category, urgency, extracted details, and a ready-to-send draft reply via the OpenAI API. Tested Zustand state layer with Vitest.</p>
+                  <p class="proj__desc">An AI tool that triages client emails for accounting firms. It returns a category, an urgency level, the details that matter, and a draft reply ready to send, all via the OpenAI API. Zustand state layer tested with Vitest.</p>
                   <span class="proj__tech">Next.js · TypeScript · Tailwind · Zustand</span>
                </div>
                <div class="proj__links">
@@ -257,12 +267,14 @@
       <div class="container">
          <div class="section-label" data-reveal><span>05</span> Contact</div>
          <h2 class="contact__title" data-reveal>Let's build<br/>something <em>good.</em></h2>
-         <p class="contact__lead" data-reveal>Open to full-time Software Engineering, Full Stack, and Cloud roles. If you're hiring — or just want to talk shop — reach out.</p>
+         <p class="contact__lead" data-reveal>Open to full-time Software Engineering, Full Stack, and Cloud roles. If you're hiring, or you just want to talk shop, say hi.</p>
          <a href="mailto:govindaraj.ke@northeastern.edu" class="contact__email" data-reveal>govindaraj.ke@northeastern.edu &rarr;</a>
          <div class="hero__links contact__links" data-reveal>
             <a href="https://github.com/KeerthanaDeviGovindaraj" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/keerthanadevig28062002/" target="_blank" rel="noopener">LinkedIn</a>
          </div>
+
+         <p class="signature" data-reveal>Thanks for scrolling this far.<span class="sig__mark">K</span></p>
       </div>
    </section>
 

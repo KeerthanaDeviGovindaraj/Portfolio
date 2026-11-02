@@ -79,4 +79,32 @@ document.addEventListener("DOMContentLoaded", () => {
    };
    window.addEventListener("scroll", setActive, { passive: true });
    setActive();
+
+   /* ---------- Cursor-follow accent dot ---------- */
+   const dot = document.getElementById("cursor-dot");
+   const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+   if (dot && fine && !reduced) {
+      let mx = 0, my = 0, dx = 0, dy = 0, shown = false;
+
+      window.addEventListener("mousemove", e => {
+         mx = e.clientX; my = e.clientY;
+         if (!shown) { dot.style.opacity = "1"; shown = true; }
+      });
+
+      // grow over interactive elements
+      document.querySelectorAll("a, button, .nav__toggle").forEach(el => {
+         el.addEventListener("mouseenter", () => dot.classList.add("hover"));
+         el.addEventListener("mouseleave", () => dot.classList.remove("hover"));
+      });
+
+      const render = () => {
+         dx += (mx - dx) * 0.18;
+         dy += (my - dy) * 0.18;
+         dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%)`;
+         requestAnimationFrame(render);
+      };
+      requestAnimationFrame(render);
+   }
 });
