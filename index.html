@@ -46,6 +46,7 @@
             <ul class="nav__list">
                <i class="nav__close" id="nav-close">&times;</i>
                <li><a href="#about" class="nav__link">About</a></li>
+               <li><a href="#skills" class="nav__link">Stack</a></li>
                <li><a href="#work" class="nav__link">Work</a></li>
                <li><a href="#projects" class="nav__link">Projects</a></li>
                <li><a href="#contact" class="nav__link">Contact</a></li>
@@ -71,10 +72,9 @@
             Keerthana<br/>Devi <em>Govindaraj</em>
          </h1>
          <p class="hero__lead" data-reveal>
-            I like building the whole thing. The cloud infrastructure
-            underneath, the APIs in the middle, and the interface people
-            actually touch. My favorite work is the kind that's quietly
-            reliable.
+            Full stack engineer. Lately I build AI-assisted tools that check
+            themselves: explanations audited against static analysis,
+            forensic replays, and benchmarks that admit their limits.
          </p>
 
          <div class="hero__meta" data-reveal>
@@ -92,8 +92,8 @@
 
          <p class="hero__currently" data-reveal>
             <span class="currently__k">Currently</span>
-            building cloud-native side projects, reading about distributed
-            systems, and learning one new AWS service a week.
+            Product Analyst at Linedata, master's student at Northeastern,
+            and shipping AI-systems side projects. The latest is IntentTrace.
          </p>
       </div>
    </section>
@@ -106,22 +106,45 @@
          <div class="section-label" data-reveal><span>01</span> About</div>
          <div class="about__body">
             <p class="lead" data-reveal>
-               I'm happiest when a project touches every layer. There's
-               something satisfying about tracing a request from a React click
-               all the way down to the Terraform that provisioned the database.
+               I like software that shows its work.
             </p>
             <p data-reveal>
-               Right now I'm doing my master's in Software Engineering Systems
-               at Northeastern. Before that, three internships taught me how
-               real teams ship software: one in full-stack product, one in
-               cloud infrastructure, and one in machine learning. Each one left
-               me a little more opinionated about doing things well.
+               I started in electronics and computer engineering at SRM, then
+               found machine learning through an internship classifying support
+               tickets and a research project on eye-tracking that ended up
+               published. From there I moved into full stack engineering at
+               FITA Academy, where I shipped a student management system for
+               500+ students. Now I'm doing my master's in Software Engineering
+               Systems at Northeastern and working at Linedata.
             </p>
+            <p data-reveal>
+               The thread through my recent projects is trust. AI tools are
+               easy to build and hard to believe, so I try to make ones that
+               check themselves and say plainly what they don't know.
+            </p>
+
+            <div class="principles" data-reveal>
+               <div class="principle">
+                  <span class="principle__no">i.</span>
+                  <h3>Show the work</h3>
+                  <p>SchemaLens cross-checks every AI explanation against static analysis. Dry Run tags each claim as given, benchmark, or assumption.</p>
+               </div>
+               <div class="principle">
+                  <span class="principle__no">ii.</span>
+                  <h3>Say what it doesn't know</h3>
+                  <p>IntentTrace labels its synthetic results as pipeline tests, not accuracy. HeatSink calls itself a screening tool, not a permit decision.</p>
+               </div>
+               <div class="principle">
+                  <span class="principle__no">iii.</span>
+                  <h3>Test how it breaks</h3>
+                  <p>Property-based tests in HeatSink and IntentTrace, and a hand-labeled accuracy benchmark that runs in CI for SchemaLens.</p>
+               </div>
+            </div>
 
             <dl class="facts" data-reveal>
                <div><dt>Education</dt><dd>M.S. Software Engineering Systems, Northeastern University (2025 to 2027)<br/>B.Tech, Electronics &amp; Computer Engineering, SRM (2020 to 2024)</dd></div>
-               <div><dt>Based in</dt><dd>Boston, MA. Happy to relocate or work remote.</dd></div>
-               <div><dt>Focus</dt><dd>Full Stack · Cloud / AWS · Distributed Systems · AI</dd></div>
+               <div><dt>Based in</dt><dd>Boston, MA</dd></div>
+               <div><dt>Focus</dt><dd>Full Stack · Cloud / AWS · AI Systems</dd></div>
             </dl>
          </div>
       </div>
@@ -133,13 +156,103 @@
    <section class="skills" id="skills">
       <div class="container grid-2">
          <div class="section-label" data-reveal><span>02</span> Stack</div>
-         <div class="skills__body">
-            <div class="skill-row" data-reveal><span class="k">Languages</span><span class="v">Java · Python · JavaScript · TypeScript · HTML/CSS</span></div>
-            <div class="skill-row" data-reveal><span class="k">Frontend</span><span class="v">React · Next.js · Redux · Angular · Tailwind · Material-UI</span></div>
-            <div class="skill-row" data-reveal><span class="k">Backend</span><span class="v">Spring Boot · FastAPI · Django · Node.js · Express · REST · Microservices</span></div>
-            <div class="skill-row" data-reveal><span class="k">Cloud / DevOps</span><span class="v">AWS (EC2, RDS, S3, Lambda, DynamoDB, IAM, Route53, ALB) · Terraform · Docker · GitHub Actions · CI/CD</span></div>
-            <div class="skill-row" data-reveal><span class="k">Data</span><span class="v">PostgreSQL · MySQL · MongoDB · DynamoDB · SQLAlchemy</span></div>
-            <div class="skill-row" data-reveal><span class="k">AI / ML</span><span class="v">TensorFlow · PyTorch · OpenCV · NLP · LLM Integration · Gemini / OpenAI</span></div>
+         <div class="stack">
+            <p class="stack__intro" data-reveal>
+               What I work with, and where I've actually used it. Each line
+               points to the projects behind it.
+            </p>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Languages</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">Python</span><span class="sl__where">SchemaLens, IntentTrace, Dry Run, Cloud-Native, ASD research</span></li>
+                     <li><span class="sl__name">TypeScript</span><span class="sl__where">HeatSink, SchemaLens, IntentTrace, InboxTriage</span></li>
+                     <li><span class="sl__name">Java</span><span class="sl__where">Spring Boot services at FITA Academy</span></li>
+                     <li><span class="sl__name">SQL and PL/pgSQL</span><span class="sl__where">SchemaLens parses PL/pgSQL with Postgres's own parser</span></li>
+                     <li><span class="sl__name">JavaScript</span><span class="sl__where">GLIMPSE</span></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Frontend</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">React</span><span class="sl__where">HeatSink, SchemaLens, IntentTrace, GLIMPSE, FITA Academy</span></li>
+                     <li><span class="sl__name">Next.js</span><span class="sl__where">InboxTriage</span></li>
+                     <li><span class="sl__name">Redux</span><span class="sl__where">GLIMPSE</span></li>
+                     <li><span class="sl__name">Tailwind CSS</span><span class="sl__where">IntentTrace, InboxTriage</span></li>
+                     <li><span class="sl__name">Vite</span><span class="sl__where">HeatSink, SchemaLens, IntentTrace</span></li>
+                  </ul>
+                  <p class="stack-also"><span>Also worked with</span> Angular, Material-UI</p>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Backend</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">FastAPI</span><span class="sl__where">SchemaLens, IntentTrace, Cloud-Native</span></li>
+                     <li><span class="sl__name">Spring Boot</span><span class="sl__where">20+ REST APIs with JWT and RBAC at FITA Academy</span></li>
+                     <li><span class="sl__name">Node.js</span><span class="sl__where">GLIMPSE</span></li>
+                  </ul>
+                  <p class="stack-also"><span>Also worked with</span> Django, Express, microservices</p>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Cloud and DevOps</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">AWS</span><span class="sl__where">Cloud-Native: EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53, Lambda, SNS, DynamoDB, IAM, KMS, Secrets Manager</span></li>
+                     <li><span class="sl__name">Terraform</span><span class="sl__where">Cloud-Native, 3,000+ lines</span></li>
+                     <li><span class="sl__name">Packer</span><span class="sl__where">Custom machine image builds for Cloud-Native</span></li>
+                     <li><span class="sl__name">Docker</span><span class="sl__where">IntentTrace, Dry Run, Aican Automate</span></li>
+                     <li><span class="sl__name">GitHub Actions</span><span class="sl__where">CI for SchemaLens, IntentTrace, Cloud-Native; deploys for HeatSink</span></li>
+                     <li><span class="sl__name">Deploying</span><span class="sl__where">Vercel, Render, Netlify, GitHub Pages</span></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Data</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">PostgreSQL</span><span class="sl__where">SchemaLens, Cloud-Native</span></li>
+                     <li><span class="sl__name">MongoDB</span><span class="sl__where">FITA Academy, GLIMPSE</span></li>
+                     <li><span class="sl__name">DynamoDB</span><span class="sl__where">Cloud-Native</span></li>
+                  </ul>
+                  <p class="stack-also"><span>Also worked with</span> MySQL, SQLAlchemy</p>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">AI and ML</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">LLM apps</span><span class="sl__where">OpenAI in InboxTriage and Dry Run, Gemini in GLIMPSE</span></li>
+                     <li><span class="sl__name">Multi-agent</span><span class="sl__where">Dry Run, a seven-role panel built with CrewAI</span></li>
+                     <li><span class="sl__name">MCP servers</span><span class="sl__where">SchemaLens, IntentTrace</span></li>
+                     <li><span class="sl__name">TensorFlow and OpenCV</span><span class="sl__where">Eye-tracking ASD research (published)</span></li>
+                     <li><span class="sl__name">NLP</span><span class="sl__where">Ticket classifier at Aican Automate: TF-IDF, Logistic Regression, Random Forest</span></li>
+                  </ul>
+                  <p class="stack-also"><span>Also worked with</span> PyTorch</p>
+               </div>
+            </div>
+
+            <div class="stack-group" data-reveal>
+               <h3 class="stack-group__title">Testing and tools</h3>
+               <div class="stack-group__body">
+                  <ul class="stack-list">
+                     <li><span class="sl__name">pytest and Vitest</span><span class="sl__where">SchemaLens, IntentTrace, HeatSink, InboxTriage</span></li>
+                     <li><span class="sl__name">Property-based testing</span><span class="sl__where">fast-check in HeatSink, Hypothesis in IntentTrace</span></li>
+                     <li><span class="sl__name">Benchmarks</span><span class="sl__where">Hand-labeled accuracy set in CI for SchemaLens; labeled synthetic set for IntentTrace</span></li>
+                     <li><span class="sl__name">Kiro</span><span class="sl__where">Spec-driven development for IntentTrace and HeatSink</span></li>
+                  </ul>
+                  <p class="stack-also"><span>Also</span> Git, Agile, Scrum</p>
+               </div>
+            </div>
          </div>
       </div>
    </section>
@@ -208,8 +321,21 @@
             <li class="proj" data-reveal>
                <span class="proj__no">02</span>
                <div class="proj__main">
+                  <h3 class="proj__title">IntentTrace</h3>
+                  <p class="proj__desc">When an AI agent gets tricked into buying something, who pays? IntentTrace investigates. A pre-payment gate blocks suspicious carts before money moves, and an investigator replays the purchase without the suspicious text to decide whether it was legitimate, out of scope, tampered with, or manipulated by prompt injection. Decisions land in a signed, tamper-evident log. Scored on a 300-case synthetic benchmark, and upfront that this tests the pipeline, not real-world accuracy.</p>
+                  <span class="proj__tech">Python · FastAPI · React · TypeScript · MCP · Docker</span>
+               </div>
+               <div class="proj__links">
+                  <a href="https://intenttrace.onrender.com" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/intenttrace" target="_blank" rel="noopener">Code</a>
+               </div>
+            </li>
+
+            <li class="proj" data-reveal>
+               <span class="proj__no">03</span>
+               <div class="proj__main">
                   <h3 class="proj__title">HeatSink</h3>
-                  <p class="proj__desc">A screening tool that answers one question: if you cooled an AI data center with seawater, where would its heat do the least harm to the ocean? It maps coastal temperatures, models the thermal plume, and gives planners a plain-English read. Covered by unit and property-based tests.</p>
+                  <p class="proj__desc">A screening tool that answers one question: if you cooled an AI data center with seawater, where would its heat do the least harm to the ocean? It maps coastal temperatures, models the thermal plume, and gives planners a plain-English read. Covered by unit and property-based tests. Built with a teammate.</p>
                   <span class="proj__tech">TypeScript · React · Vite · Vitest</span>
                </div>
                <div class="proj__links">
@@ -220,7 +346,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">03</span>
+               <span class="proj__no">04</span>
                <div class="proj__main">
                   <h3 class="proj__title">Cloud-Native Serverless App</h3>
                   <p class="proj__desc">Production-style AWS infrastructure in 3,000+ lines of Terraform (VPCs, EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53), plus an SNS to Lambda to DynamoDB verification pipeline and secure-by-default IAM, KMS, and Secrets Manager.</p>
@@ -233,7 +359,25 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">04</span>
+               <span class="proj__no">05</span>
+               <div class="proj__main">
+                  <h3 class="proj__title">Dry Run</h3>
+                  <p class="proj__desc">Rehearse a product decision before it's real. Seven AI stakeholders (engineering, marketing, risk, a devil's advocate and more) pressure-test the call, then a decision lead writes a brief with the case against it and an assumptions register. Every claim is tagged as given, benchmark, or assumption, and you can ground the panel in your own CSV so it argues from real numbers instead of inventing them.</p>
+                  <span class="proj__tech">Python · CrewAI · Streamlit · OpenAI · Docker</span>
+               </div>
+               <div class="proj__links">
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/Dry-Run" target="_blank" rel="noopener">Code</a>
+               </div>
+            </li>
+
+         </ol>
+
+         <div class="projects__sub" data-reveal>Earlier work</div>
+
+         <ol class="proj-list proj-list--compact">
+
+            <li class="proj" data-reveal>
+               <span class="proj__no">06</span>
                <div class="proj__main">
                   <h3 class="proj__title">GLIMPSE</h3>
                   <p class="proj__desc">AI sports-commentary platform that turns live match events into real-time natural-language commentary via the Gemini API, cutting manual effort 80%. Built with a team of 4; led the React/Redux frontend.</p>
@@ -246,7 +390,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">05</span>
+               <span class="proj__no">07</span>
                <div class="proj__main">
                   <h3 class="proj__title">InboxTriage</h3>
                   <p class="proj__desc">An AI tool that triages client emails for accounting firms. It returns a category, an urgency level, the details that matter, and a draft reply ready to send, all via the OpenAI API. Zustand state layer tested with Vitest.</p>
@@ -258,7 +402,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">06</span>
+               <span class="proj__no">08</span>
                <div class="proj__main">
                   <h3 class="proj__title">Eye-Tracking ASD Diagnosis <span class="tag">Published</span></h3>
                   <p class="proj__desc">CNN + PCA pipeline classifying ASD risk across 10,000+ eye-tracking samples, improving accuracy 20% over baseline with transfer learning. Published as a research paper.</p>
