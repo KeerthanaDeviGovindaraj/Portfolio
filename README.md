@@ -1,35 +1,51 @@
-# Keerthana Devi Govindaraj — Portfolio
+# Keerthana Devi Govindaraj, Portfolio
 
-Personal portfolio of Keerthana Devi Govindaraj, Full Stack Software Engineer
-(MS Software Engineering @ Northeastern University).
+Personal portfolio of Keerthana Devi Govindaraj, full stack software engineer and M.S. Software Engineering Systems student at Northeastern University.
 
-🔗 **Live:** https://keerthanadevigportfolio.netlify.app/
+**Live:** https://keerthanadevigportfolio.netlify.app
 
-## Built With
-- HTML5 / CSS3 (custom design system, CSS variables, dark + light themes)
-- Vanilla JavaScript
-- [AOS](https://michalsnik.github.io/aos/) scroll animations
-- [Remix Icons](https://remixicon.com/)
-- Deployed on Netlify
+The site tells one story: software that shows its work. It covers the path from electronics to machine learning to full stack engineering, an evidence-based tech stack (every technology is paired with the projects that prove it), work experience, and selected projects.
 
-## Features
-- Single-page responsive design (mobile → desktop)
-- Dark / light theme toggle (persisted in localStorage)
-- Animated hero with floating skill cards
-- Sections: About, Skills, Experience, Projects, Contact
-- Project cards with live demo + source links
-- SEO + Open Graph / Twitter meta tags
+## Built with
+
+- Plain HTML, CSS and JavaScript. No framework and no build step.
+- Fraunces (display), Inter (body) and JetBrains Mono (labels) from Google Fonts.
+- Deployed on Netlify straight from `main`.
+
+## Details
+
+- Editorial beige palette with a clay accent, plus a dark mode that remembers your choice.
+- Scroll reveals use `IntersectionObserver`. Animations and the cursor-follow dot switch off for visitors who prefer reduced motion, and the dot only appears on pointer devices.
+- Responsive down to small phones, with a slide-in menu on mobile.
 
 ## Structure
+
 ```
-index.html     → single-page site (Home / About / Skills / Experience / Projects / Contact)
-style.css      → all styling + theming + responsive rules
-script.js      → nav, theme toggle, smooth scroll, scroll-to-top, typing effect
-img/           → icons, logos, favicons, project images
-Keerthana_Devi_Govindaraj_Resume-SDE.pdf
+index.html   the whole site, one page
+style.css    design tokens, layout, dark mode, responsive rules
+script.js    menu, theme toggle, reveals, active nav link, cursor dot
+img/         favicons and icons
+resume/      LaTeX source and compiled PDF of the resume
+Keerthana_Devi_Govindaraj_Resume-SDE.pdf   the PDF the site links to
+```
+
+## Run locally
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## Rebuild the resume
+
+```bash
+cd resume
+pdflatex resume.tex && pdflatex resume.tex
+cp resume.pdf ../Keerthana_Devi_Govindaraj_Resume-SDE.pdf
 ```
 
 ## Contact
+
 - Email: govindaraj.ke@northeastern.edu
-- LinkedIn: [Keerthana Devi G](https://www.linkedin.com/in/keerthanadevig28062002/)
-- GitHub: [KeerthanaDeviGovindaraj](https://github.com/KeerthanaDeviGovindaraj)
+- LinkedIn: https://www.linkedin.com/in/keerthanadevig28062002/
+- GitHub: https://github.com/KeerthanaDeviGovindaraj
