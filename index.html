@@ -93,7 +93,7 @@
          <p class="hero__currently" data-reveal>
             <span class="currently__k">Currently</span>
             Product Analyst at Linedata, master's student at Northeastern,
-            and shipping AI-systems side projects. The latest is IntentTrace.
+            and shipping AI-systems side projects. The latest is Scam Interrupt, built at HackPrinceton.
          </p>
       </div>
    </section>
@@ -132,7 +132,7 @@
                <div class="principle">
                   <span class="principle__no">ii.</span>
                   <h3>Say what it doesn't know</h3>
-                  <p>IntentTrace labels its synthetic results as pipeline tests, not accuracy. HeatSink calls itself a screening tool, not a permit decision.</p>
+                  <p>IntentTrace labels its synthetic results as pipeline tests, not accuracy. Scam Interrupt reports the false alarms it raised on a held-out test. HeatSink calls itself a screening tool, not a permit decision.</p>
                </div>
                <div class="principle">
                   <span class="principle__no">iii.</span>
@@ -166,11 +166,11 @@
                <h3 class="stack-group__title">Languages</h3>
                <div class="stack-group__body">
                   <ul class="stack-list">
-                     <li><span class="sl__name">Python</span><span class="sl__where">SchemaLens, IntentTrace, Dry Run, Cloud-Native, ASD research</span></li>
-                     <li><span class="sl__name">TypeScript</span><span class="sl__where">HeatSink, SchemaLens, IntentTrace, InboxTriage</span></li>
+                     <li><span class="sl__name">Python</span><span class="sl__where">SchemaLens, IntentTrace, Scam Interrupt, Dry Run, Cloud-Native, ASD research</span></li>
+                     <li><span class="sl__name">TypeScript</span><span class="sl__where">HeatSink, SchemaLens, IntentTrace, InboxTriage, Scam Interrupt (iMessage bridge)</span></li>
                      <li><span class="sl__name">Java</span><span class="sl__where">Spring Boot services at FITA Academy</span></li>
                      <li><span class="sl__name">SQL and PL/pgSQL</span><span class="sl__where">SchemaLens parses PL/pgSQL with Postgres's own parser</span></li>
-                     <li><span class="sl__name">JavaScript</span><span class="sl__where">GLIMPSE</span></li>
+                     <li><span class="sl__name">JavaScript</span><span class="sl__where">GLIMPSE, Scam Interrupt (no-build web UI)</span></li>
                   </ul>
                </div>
             </div>
@@ -193,9 +193,10 @@
                <h3 class="stack-group__title">Backend</h3>
                <div class="stack-group__body">
                   <ul class="stack-list">
-                     <li><span class="sl__name">FastAPI</span><span class="sl__where">SchemaLens, IntentTrace, Cloud-Native</span></li>
+                     <li><span class="sl__name">FastAPI</span><span class="sl__where">SchemaLens, IntentTrace, Scam Interrupt, Cloud-Native</span></li>
                      <li><span class="sl__name">Spring Boot</span><span class="sl__where">20+ REST APIs with JWT and RBAC at FITA Academy</span></li>
                      <li><span class="sl__name">Node.js</span><span class="sl__where">GLIMPSE</span></li>
+                     <li><span class="sl__name">Third-party APIs</span><span class="sl__where">Capital One Nessie (accounts, bills, decision hooks) and Photon iMessage in Scam Interrupt, with signed webhooks</span></li>
                   </ul>
                   <p class="stack-also"><span>Also worked with</span> Django, Express, microservices</p>
                </div>
@@ -222,6 +223,7 @@
                      <li><span class="sl__name">PostgreSQL</span><span class="sl__where">SchemaLens, Cloud-Native</span></li>
                      <li><span class="sl__name">MongoDB</span><span class="sl__where">FITA Academy, GLIMPSE</span></li>
                      <li><span class="sl__name">DynamoDB</span><span class="sl__where">Cloud-Native</span></li>
+                     <li><span class="sl__name">SQLite</span><span class="sl__where">Scam Interrupt, IntentTrace</span></li>
                   </ul>
                   <p class="stack-also"><span>Also worked with</span> MySQL, SQLAlchemy</p>
                </div>
@@ -231,8 +233,8 @@
                <h3 class="stack-group__title">AI and ML</h3>
                <div class="stack-group__body">
                   <ul class="stack-list">
-                     <li><span class="sl__name">LLM apps</span><span class="sl__where">OpenAI in InboxTriage and Dry Run, Gemini in GLIMPSE</span></li>
-                     <li><span class="sl__name">Multi-agent</span><span class="sl__where">Dry Run, a seven-role panel built with CrewAI</span></li>
+                     <li><span class="sl__name">LLM apps</span><span class="sl__where">OpenAI in InboxTriage and Dry Run, Gemini in GLIMPSE, open models on Groq in Scam Interrupt</span></li>
+                     <li><span class="sl__name">Multi-agent</span><span class="sl__where">Scam Interrupt (LangChain Deep Agents, traced in LangSmith), Dry Run (seven-role CrewAI panel)</span></li>
                      <li><span class="sl__name">MCP servers</span><span class="sl__where">SchemaLens, IntentTrace</span></li>
                      <li><span class="sl__name">TensorFlow and OpenCV</span><span class="sl__where">Eye-tracking ASD research (published)</span></li>
                      <li><span class="sl__name">NLP</span><span class="sl__where">Ticket classifier at Aican Automate: TF-IDF, Logistic Regression, Random Forest</span></li>
@@ -247,7 +249,8 @@
                   <ul class="stack-list">
                      <li><span class="sl__name">pytest and Vitest</span><span class="sl__where">SchemaLens, IntentTrace, HeatSink, InboxTriage</span></li>
                      <li><span class="sl__name">Property-based testing</span><span class="sl__where">fast-check in HeatSink, Hypothesis in IntentTrace</span></li>
-                     <li><span class="sl__name">Benchmarks</span><span class="sl__where">Hand-labeled accuracy set in CI for SchemaLens; labeled synthetic set for IntentTrace</span></li>
+                     <li><span class="sl__name">Benchmarks</span><span class="sl__where">Hand-labeled accuracy set in CI for SchemaLens; labeled synthetic set for IntentTrace; held-out answer set for Scam Interrupt</span></li>
+                     <li><span class="sl__name">Mocks and fakes</span><span class="sl__where">Mock bank, simulated Nessie server and a fake agent, so Scam Interrupt's 22 tests run with no keys</span></li>
                      <li><span class="sl__name">Kiro</span><span class="sl__where">Spec-driven development for IntentTrace and HeatSink</span></li>
                   </ul>
                   <p class="stack-also"><span>Also</span> Git, Agile, Scrum</p>
@@ -334,6 +337,18 @@
             <li class="proj" data-reveal>
                <span class="proj__no">03</span>
                <div class="proj__main">
+                  <h3 class="proj__title">Scam Interrupt</h3>
+                  <p class="proj__desc">Scammers coach older adults on exactly what to tell the bank, so yes or no fraud checks fail. Scam Interrupt holds a risky transfer before it settles, asks one plain question built from the customer's own words, and brings in an opted-in family member who approves or cancels with one tap. Risk is explained with her real balance and bills, and a cancelled scam flags the payee for every customer. Built at HackPrinceton with a teammate. I built the agent, the bank integration, the risk scorer and the coaching detector. On a 10-answer held-out set it caught all 5 scams but raised 3 false alarms on 5 honest answers, and I report both.</p>
+                  <span class="proj__tech">Python · FastAPI · LangChain Deep Agents · Capital One Nessie · Photon iMessage</span>
+               </div>
+               <div class="proj__links">
+                  <a href="https://github.com/KeerthanaDeviGovindaraj/scam_interrupt" target="_blank" rel="noopener">Code</a>
+               </div>
+            </li>
+
+            <li class="proj" data-reveal>
+               <span class="proj__no">04</span>
+               <div class="proj__main">
                   <h3 class="proj__title">HeatSink</h3>
                   <p class="proj__desc">A screening tool that answers one question: if you cooled an AI data center with seawater, where would its heat do the least harm to the ocean? It maps coastal temperatures, models the thermal plume, and gives planners a plain-English read. Covered by unit and property-based tests. Built with a teammate.</p>
                   <span class="proj__tech">TypeScript · React · Vite · Vitest</span>
@@ -346,7 +361,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">04</span>
+               <span class="proj__no">05</span>
                <div class="proj__main">
                   <h3 class="proj__title">Cloud-Native Serverless App</h3>
                   <p class="proj__desc">Production-style AWS infrastructure in 3,000+ lines of Terraform (VPCs, EC2 Auto Scaling, RDS Multi-AZ, ALB, Route53), plus an SNS to Lambda to DynamoDB verification pipeline and secure-by-default IAM, KMS, and Secrets Manager.</p>
@@ -359,7 +374,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">05</span>
+               <span class="proj__no">06</span>
                <div class="proj__main">
                   <h3 class="proj__title">Dry Run</h3>
                   <p class="proj__desc">Rehearse a product decision before it's real. Seven AI stakeholders (engineering, marketing, risk, a devil's advocate and more) pressure-test the call, then a decision lead writes a brief with the case against it and an assumptions register. Every claim is tagged as given, benchmark, or assumption, and you can ground the panel in your own CSV so it argues from real numbers instead of inventing them.</p>
@@ -377,7 +392,7 @@
          <ol class="proj-list proj-list--compact">
 
             <li class="proj" data-reveal>
-               <span class="proj__no">06</span>
+               <span class="proj__no">07</span>
                <div class="proj__main">
                   <h3 class="proj__title">GLIMPSE</h3>
                   <p class="proj__desc">AI sports-commentary platform that turns live match events into real-time natural-language commentary via the Gemini API, cutting manual effort 80%. Built with a team of 4; led the React/Redux frontend.</p>
@@ -390,7 +405,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">07</span>
+               <span class="proj__no">08</span>
                <div class="proj__main">
                   <h3 class="proj__title">InboxTriage</h3>
                   <p class="proj__desc">An AI tool that triages client emails for accounting firms. It returns a category, an urgency level, the details that matter, and a draft reply ready to send, all via the OpenAI API. Zustand state layer tested with Vitest.</p>
@@ -402,7 +417,7 @@
             </li>
 
             <li class="proj" data-reveal>
-               <span class="proj__no">08</span>
+               <span class="proj__no">09</span>
                <div class="proj__main">
                   <h3 class="proj__title">Eye-Tracking ASD Diagnosis <span class="tag">Published</span></h3>
                   <p class="proj__desc">CNN + PCA pipeline classifying ASD risk across 10,000+ eye-tracking samples, improving accuracy 20% over baseline with transfer learning. Published as a research paper.</p>
