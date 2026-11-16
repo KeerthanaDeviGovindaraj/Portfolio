@@ -2,9 +2,9 @@
 
 Personal portfolio of Keerthana Devi Govindaraj, full stack software engineer and M.S. Software Engineering Systems student at Northeastern University.
 
-**Live:** https://keerthanadevigportfolio.netlify.app
+**Live:** https://keerthanadevigovindaraj.github.io/Portfolio/
 
-**Mirror:** https://keerthanadevigovindaraj.github.io/Portfolio/
+**Also on Netlify:** https://keerthanadevigportfolio.netlify.app (older copy, it can lag behind)
 
 The site tells one story: software that shows its work. It covers the path from electronics to machine learning to full stack engineering, an evidence-based tech stack (every technology is paired with the projects that prove it), work experience, and selected projects.
 
@@ -12,8 +12,8 @@ The site tells one story: software that shows its work. It covers the path from 
 
 - Plain HTML, CSS and JavaScript. No framework and no build step.
 - Fraunces (display), Inter (body) and JetBrains Mono (labels) from Google Fonts.
-- Hosted on Netlify, with a GitHub Pages mirror. Both publish from `main`, and both work because every asset path is relative.
-- The mirror is a fallback: Netlify's free plan pauses production deploys when its monthly credits run out, and GitHub Pages has no credit limit.
+- Hosted on GitHub Pages, with a Netlify copy. Both publish from `main`, and both work because every asset path is relative.
+- GitHub Pages is the main link because it has no credit limit. Netlify's free plan pauses production deploys when its monthly credits run out, so that copy can fall behind.
 
 ## Details
 
