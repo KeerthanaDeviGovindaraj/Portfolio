@@ -1,120 +1,130 @@
 \documentclass[letterpaper,10pt]{article}
 
-\usepackage[letterpaper,top=0.4in,bottom=0.35in,left=0.55in,right=0.55in]{geometry}
-\usepackage{array}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
+\usepackage[letterpaper,top=0.38in,bottom=0.35in,left=0.5in,right=0.5in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{helvet}            % Helvetica-style sans-serif
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
 
-% Make the PDF text extract cleanly for applicant tracking systems
+% Clean text extraction for ATS
 \input{glyphtounicode}
 \pdfgentounicode=1
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\raggedbottom
-\raggedright
 
-% ----- Sections -----
-\titleformat{\section}{\scshape\large\bfseries}{}{0em}{}[\vspace{-5pt}\titlerule]
-\titlespacing{\section}{0pt}{7.5pt}{4pt}
+% ----- Colors -----
+\definecolor{barbg}{gray}{0.90}      % grey section bar
+\definecolor{link}{HTML}{1A5FB4}     % blue links
+\definecolor{rulegray}{gray}{0.75}
+\hypersetup{colorlinks=true, urlcolor=link, linkcolor=link}
 
-% ----- Bullets (explicit label so nesting never produces a dash) -----
+% ----- Section header: grey shaded bar, full width -----
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {}{0pt}
+  {\colorsection}
+\titlespacing{\section}{0pt}{5pt}{3pt}
+\newcommand{\colorsection}[1]{%
+  \colorbox{barbg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\strut #1}}}
+
+% ----- Spacing of bullet lists -----
 \newlist{bullets}{itemize}{1}
-\setlist[bullets]{label=\textbullet,leftmargin=0.17in,labelsep=0.08in,
-  itemsep=1.2pt,topsep=1.5pt,parsep=0pt,partopsep=0pt}
-\newcommand{\bi}[1]{\item {\fontsize{9.5}{11.5}\selectfont #1}}
+\setlist[bullets]{label=\textbullet, leftmargin=0.16in, labelsep=0.07in,
+  topsep=1pt, itemsep=0.5pt, parsep=0pt, partopsep=0pt}
+\newcommand{\bi}[1]{\item {\fontsize{9.2}{10.8}\selectfont #1}}
 
-% Plain lines joined with \hfill (not tables), so text extraction keeps each line in order.
+% ----- Experience entry: title (left, bold) + date (right); then place/subtitle line -----
+\newcommand{\role}[2]{%
+  \vspace{2pt}\noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{#1} & #2\\\end{tabular*}\par}
+\newcommand{\sub}[2]{%
+  \noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textit{\small #1} & \textit{\small #2}\\\end{tabular*}\par\vspace{-1pt}}
 
-% ----- Entry: organisation, date, role, place -----
-\newcommand{\subhead}[4]{%
-  \par\vspace{4pt}\noindent\textbf{#1}\hfill\textbf{#2}\par\nopagebreak
-  \noindent\textit{#3}\hfill\textit{#4}\par\nopagebreak}
-
-% ----- Project: name, stack, links -----
+% ----- Project entry: name + date (left group) and link (right) -----
 \newcommand{\proj}[3]{%
-  \par\vspace{4pt}\noindent\textbf{#1} \textbar{} \textit{\small #2}\hfill{\small #3}\par\nopagebreak}
+  \vspace{2pt}\noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{#1} & #2\\\end{tabular*}\par
+  {\itshape\small #3}\par\vspace{-1pt}}
 
-% ----- Skills row: "Label: items" on one line so parsers keep label and items together -----
+% ----- Skills row -----
 \newcommand{\skill}[2]{%
-  \par\vspace{1.5pt}\noindent\hangindent=0.18in\hangafter=1
-  \textbf{#1:} #2\par}
+  \vspace{1pt}\noindent\hangindent=1.55in\hangafter=1
+  \makebox[1.55in][l]{\textbf{\small #1}}{\small #2}\par}
 
 \begin{document}
 
-% ----- Header -----
+% ===== Header =====
 \begin{center}
-  {\Huge\bfseries Keerthana Devi Govindaraj}\\[4pt]
-  {\small\itshape Software Engineer \textbar{} Full Stack, Cloud, and AI Systems}\\[3pt]
-  {\small Boston, MA \textbar{} (857) 395-8132 \textbar{}
-  \href{mailto:govindaraj.ke@northeastern.edu}{govindaraj.ke@northeastern.edu} \textbar{}
-  \href{https://www.linkedin.com/in/keerthanadevig28062002/}{LinkedIn} \textbar{}
-  \href{https://github.com/KeerthanaDeviGovindaraj}{GitHub} \textbar{}
-  \href{https://keerthanadevigovindaraj.github.io/Portfolio/}{Portfolio}}
+  {\fontsize{19}{21}\selectfont\bfseries Keerthana Devi Govindaraj}\\[2pt]
+  {\small Boston, MA \ \textbar\ \ (857) 395-8132 \ \textbar\ \ \href{mailto:govindaraj.ke@northeastern.edu}{govindaraj.ke@northeastern.edu} \ \textbar\ \ \href{https://www.linkedin.com/in/keerthanadevig28062002/}{LinkedIn} \ \textbar\ \ \href{https://github.com/KeerthanaDeviGovindaraj}{GitHub} \ \textbar\ \ \href{https://keerthanadevigovindaraj.github.io/Portfolio/}{Portfolio}}
 \end{center}
-\vspace{-8pt}
-
-% ----- Education -----
-\section{Education}
-\subhead{Northeastern University}{Expected Dec 2027}
-        {M.S. Software Engineering Systems}{Boston, MA}
-\subhead{SRM Institute of Science and Technology}{Oct 2020 - 2024}
-        {B.Tech, Electronics \& Computer Engineering}{Chennai, India}
-
-% ----- Skills -----
-\section{Technical Skills}
 \vspace{1pt}
-{\small
-\skill{Languages}{Python, Java, TypeScript, JavaScript, C\#, SQL}
-\skill{Frontend}{React, Next.js, Redux, Angular, Tailwind CSS}
-\skill{Backend \& APIs}{FastAPI, Spring Boot, .NET, Node.js, Express, REST, GraphQL, Microservices, JWT, RBAC}
-\skill{Cloud \& DevOps}{AWS (EC2, RDS, Lambda, DynamoDB, S3, IAM, KMS, ALB), Terraform, Packer, Docker, GitHub Actions}
-\skill{Data}{PostgreSQL, MySQL, MongoDB, DynamoDB, SQLite}
-\skill{AI \& ML}{LLM apps (OpenAI, Gemini), LangChain Deep Agents, MCP, TensorFlow, PyTorch, OpenCV, NLP}
-\skill{Testing \& Tools}{pytest, Vitest, property-based testing, CI benchmarks, Git, Agile/Scrum}\par}
 
-% ----- Experience -----
+% ===== Education =====
+\section{Education}
+\role{Northeastern University, Boston, MA}{}
+\sub{M.S. in Software Engineering Systems}{Expected Dec. 2027}
+\role{SRM Institute of Science and Technology, Chennai, India}{}
+\sub{B.Tech in Electronics \& Computer Engineering}{Oct. 2020 - 2024}
+
+% ===== Technical Skills =====
+\section{Technical Skills}
+\skill{Languages:}{Python, Java, TypeScript, JavaScript, C\#, SQL}
+\skill{Frontend:}{React, Next.js, Redux, Angular, Tailwind CSS}
+\skill{Backend \& APIs:}{FastAPI, Spring Boot, .NET, Node.js, Express, REST, GraphQL, Microservices, JWT, RBAC}
+\skill{Cloud \& DevOps:}{AWS (EC2, RDS, Lambda, DynamoDB, S3, IAM, KMS, ALB), Terraform, Packer, Docker, GitHub Actions}
+\skill{Data:}{PostgreSQL, MySQL, MongoDB, DynamoDB, SQLite}
+\skill{AI \& ML:}{LLM apps (OpenAI, Gemini), LangChain Deep Agents, MCP, TensorFlow, PyTorch, OpenCV, NLP}
+\skill{Testing \& Tools:}{pytest, Vitest, property-based testing, CI benchmarks, Git, Agile/Scrum}
+
+% ===== Experience =====
 \section{Experience}
-\subhead{Linedata}{Sep 2026 - Present}{Product Analyst}{Boston, MA}
-{\small\itshape Embedded in the product team as the engineer modernizing the Web Admin module.}
+\role{Linedata - Product Analyst}{Sep. 2026 - Present}
+\sub{Embedded in the product team as the engineer modernizing the Web Admin module.}{Boston, MA}
 \begin{bullets}
   \bi{Modernized a legacy C++ desktop system into a web platform, rebuilding business-critical admin screens in React, GraphQL, and .NET with full behaviour parity across the product suite.}
   \bi{Pioneered an AI-first delivery approach, building each screen with an AI coding assistant on reusable design patterns, turning a slow screen-by-screen migration into a faster, repeatable process.}
   \bi{Prevented silent data errors by testing against real data, surfacing undocumented legacy rules before release and documenting them for engineering and leadership.}
 \end{bullets}
 
-\subhead{FITA Academy}{Jan 2025 - Aug 2025}{Software Engineer}{Chennai, India}
+\role{FITA Academy - Software Engineer}{Jan. 2025 - Aug. 2025}
+\sub{}{Chennai, India}
 \begin{bullets}
-  \bi{Shipped a full-stack student management platform from the ground up, owning system design, backend, and deployment across enrollment, attendance, dashboards, and reporting.}
+  \bi{Shipped a full-stack student management platform from the ground up, owning system design, backend, and deployment across enrollment, attendance, and reporting.}
   \bi{Built 20+ secure REST APIs with Java Spring Boot, JWT, RBAC, and MongoDB, plus reusable React, Next.js, and Angular components that cut duplicate work and sped up delivery.}
 \end{bullets}
 
-\subhead{Aican Automate}{Jan 2023 - Mar 2023}{Machine Learning Engineer}{Chennai, India}
+\role{Aican Automate - Machine Learning Engineer}{Jan. 2023 - Mar. 2023}
+\sub{}{Chennai, India}
 \begin{bullets}
   \bi{Built an NLP support-ticket classifier (TF-IDF, Logistic Regression, Random Forest) at 87\% precision, and containerized training with Docker so 5+ engineers could retrain and deploy reproducibly.}
 \end{bullets}
 
-% ----- Projects -----
+% ===== Projects =====
 \section{Projects}
-\proj{Scam Interrupt}{Python, FastAPI, LangChain Deep Agents, Capital One Nessie API}
-     {HackPrinceton, team of 2 \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/scam_interrupt}{Code}}
+\proj{Scam Interrupt \ \textbar\ \ HackPrinceton, team of 2}{\href{https://github.com/KeerthanaDeviGovindaraj/scam_interrupt}{GitHub}}
+     {Python, FastAPI, LangChain Deep Agents, Capital One Nessie API}
 \begin{bullets}
-  \bi{Built an AI agent that holds risky bank transfers, asks a follow-up from the customer's own words to catch scammer coaching, and lets an opted-in family member approve or cancel. I built the agent, bank integration, and scoring.}
+  \bi{Built an AI agent that holds risky bank transfers, asks a follow-up from the customer's own words to catch scammer coaching, and lets an opted-in family member approve or cancel. I owned the agent, bank integration, and scoring.}
   \bi{Added guardrails against early release and 22 offline tests with a mock bank and fake agent; a held-out evaluation caught 5 of 5 scams and led me to fix the rule behind every false alarm.}
 \end{bullets}
 
-\proj{SchemaLens}{Python, TypeScript, React, PostgreSQL, MCP}
-     {\href{https://web-sigma-six-99.vercel.app}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/schemalens}{Code}}
+\proj{SchemaLens}{\href{https://web-sigma-six-99.vercel.app}{Live} \ \textbar\ \ \href{https://github.com/KeerthanaDeviGovindaraj/schemalens}{GitHub}}
+     {Python, TypeScript, React, PostgreSQL, MCP}
 \begin{bullets}
   \bi{Built a tool that makes legacy PostgreSQL databases readable: searchable docs and a read/write lineage map parsed from PL/pgSQL with Postgres's own parser, plus LLM explanations audited against static analysis.}
   \bi{Shipped an MCP server so AI assistants answer schema questions from the scan, scored accuracy on a hand-labeled benchmark in CI, and queried only system catalogs, never row data.}
 \end{bullets}
 
-\proj{Cloud-Native Serverless App}{Python, FastAPI, Terraform, AWS, Packer}
-     {\href{https://github.com/KeerthanaDeviGovindaraj/tf-infra-fork}{Infra} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/webapp-FORK}{App}}
+\proj{Cloud-Native Serverless App}{\href{https://github.com/KeerthanaDeviGovindaraj/tf-infra-fork}{Infra} \ \textbar\ \ \href{https://github.com/KeerthanaDeviGovindaraj/webapp-FORK}{App}}
+     {Python, FastAPI, Terraform, AWS, Packer}
 \begin{bullets}
   \bi{Provisioned AWS in 1,300+ lines of Terraform: VPC across availability zones, Auto Scaling group (3 to 5 EC2) behind an ALB, KMS-encrypted RDS PostgreSQL, Route53, ACM TLS; Packer images and GitHub Actions CI.}
   \bi{Built a serverless SNS, Lambda, and DynamoDB email-verification flow with token expiry and deduplication, secured with IAM, four rotating KMS keys, and Secrets Manager.}
