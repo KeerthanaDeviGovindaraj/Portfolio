@@ -68,9 +68,9 @@
 \section{Technical Skills}
 \vspace{1pt}
 {\small
-\skill{Languages}{Python, Java, TypeScript, JavaScript, SQL}
+\skill{Languages}{Python, Java, TypeScript, JavaScript, C\#, SQL}
 \skill{Frontend}{React, Next.js, Redux, Angular, Tailwind CSS}
-\skill{Backend \& APIs}{FastAPI, Spring Boot, Node.js, Express, REST, Microservices, JWT, RBAC}
+\skill{Backend \& APIs}{FastAPI, Spring Boot, .NET, Node.js, Express, REST, GraphQL, Microservices, JWT, RBAC}
 \skill{Cloud \& DevOps}{AWS (EC2, RDS, Lambda, DynamoDB, S3, IAM, KMS, ALB), Terraform, Packer, Docker, GitHub Actions}
 \skill{Data}{PostgreSQL, MySQL, MongoDB, DynamoDB, SQLite}
 \skill{AI \& ML}{LLM apps (OpenAI, Gemini), LangChain Deep Agents, MCP, TensorFlow, PyTorch, OpenCV, NLP}
@@ -80,20 +80,20 @@
 \section{Experience}
 \subhead{Linedata}{Sep 2026 - Present}{Product Analyst}{Boston, MA}
 \begin{bullets}
-  \bi{Modernize the Web Admin module of an asset-management platform, improving architecture, usability, and maintainability.}
-  \bi{Work with product managers, architecture, R\&D, and Scrum teams to define and deliver feature and platform improvements.}
+  \bi{Modernized a legacy C++ desktop system into a web platform, rebuilding business-critical admin screens in React, GraphQL, and .NET with full behaviour parity across the product suite.}
+  \bi{Pioneered an AI-first delivery approach, building each screen with an AI coding assistant on reusable design patterns, turning a slow screen-by-screen migration into a faster, repeatable process.}
+  \bi{Prevented silent data errors by testing against real data, surfacing undocumented legacy rules before release and documenting them for engineering and leadership.}
 \end{bullets}
 
 \subhead{FITA Academy}{Jan 2025 - Aug 2025}{Software Engineer}{Chennai, India}
 \begin{bullets}
-  \bi{Led end-to-end development and deployment of a full-stack Student Management System for 500+ students, replacing spreadsheet-based enrollment, attendance, and reporting.}
-  \bi{Built 20+ secure REST APIs with Java Spring Boot microservices, JWT, RBAC, and MongoDB behind a React UI; reached sub-100ms p95 latency and improved release velocity 30\% with CI/CD.}
+  \bi{Shipped a full-stack student management platform from the ground up, owning system design, backend, and deployment across enrollment, attendance, dashboards, and reporting.}
+  \bi{Built 20+ secure REST APIs with Java Spring Boot, JWT, RBAC, and MongoDB, plus reusable React, Next.js, and Angular components that cut duplicate work and sped up delivery.}
 \end{bullets}
 
 \subhead{Aican Automate}{Jan 2023 - Mar 2023}{Machine Learning Engineer}{Chennai, India}
 \begin{bullets}
-  \bi{Built an NLP support-ticket classifier (TF-IDF, Logistic Regression, Random Forest) at 87\% precision, cutting manual triage.}
-  \bi{Containerized training and deployment with Docker so 5+ engineers could retrain, validate, and deploy models reproducibly.}
+  \bi{Built an NLP support-ticket classifier (TF-IDF, Logistic Regression, Random Forest) at 87\% precision, and containerized training with Docker so 5+ engineers could retrain and deploy reproducibly.}
 \end{bullets}
 
 % ----- Projects -----
@@ -102,7 +102,7 @@
      {HackPrinceton, team of 2 \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/scam_interrupt}{Code}}
 \begin{bullets}
   \bi{Built an AI agent that holds risky bank transfers, asks a follow-up from the customer's own words to catch scammer coaching, and lets an opted-in family member approve or cancel. I built the agent, bank integration, and scoring.}
-  \bi{Added guardrails against early release, 22 offline tests with a mock bank and fake agent, and a held-out evaluation (5 of 5 scams caught) that led me to fix the rule behind every false alarm.}
+  \bi{Added guardrails against early release and 22 offline tests with a mock bank and fake agent; a held-out evaluation caught 5 of 5 scams and led me to fix the rule behind every false alarm.}
 \end{bullets}
 
 \proj{SchemaLens}{Python, TypeScript, React, PostgreSQL, MCP}
@@ -118,14 +118,5 @@
   \bi{Provisioned AWS in 1,300+ lines of Terraform: VPC across availability zones, Auto Scaling group (3 to 5 EC2) behind an ALB, KMS-encrypted RDS PostgreSQL, Route53, ACM TLS; Packer images and GitHub Actions CI.}
   \bi{Built a serverless SNS, Lambda, and DynamoDB email-verification flow with token expiry and deduplication, secured with IAM, four rotating KMS keys, and Secrets Manager.}
 \end{bullets}
-
-\proj{HeatSink}{TypeScript, React, Vite, Vitest, fast-check}
-     {\href{https://keerthanadevigovindaraj.github.io/HeatSink/}{Live} \textbar{} \href{https://github.com/KeerthanaDeviGovindaraj/HeatSink}{Code}}
-\begin{bullets}
-  \bi{Built with a teammate: a screening tool that maps coastal temperatures and models thermal plumes to find where a seawater-cooled data center harms the ocean least, with unit and property-based tests run in CI before each deploy.}
-\end{bullets}
-
-\proj{Eye-Tracking ASD Diagnosis (Published)}{CNNs, transfer learning, PCA on 10,000+ samples, +20\% accuracy}
-     {\href{https://github.com/KeerthanaDeviGovindaraj/Autism_Eye}{Code}}
 
 \end{document}
