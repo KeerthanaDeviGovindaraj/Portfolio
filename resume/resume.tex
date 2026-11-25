@@ -10,6 +10,7 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{array}
+\usepackage{microtype}         % optical margin alignment and smoother justified lines
 
 % Clean text extraction for ATS
 \input{glyphtounicode}
@@ -17,6 +18,10 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\frenchspacing                 % one even space everywhere, no extra gap after : or .
+\hyphenpenalty=1500            % avoid splitting words across lines ("compo-nents")
+\exhyphenpenalty=1000          % avoid breaking "micro-frontends" at its hyphen
+\emergencystretch=1.5em
 
 % ----- Colors -----
 \definecolor{barbg}{gray}{0.90}      % grey section bar
@@ -55,8 +60,8 @@
 
 % ----- Skills row -----
 \newcommand{\skill}[2]{%
-  \vspace{1pt}\noindent\hangindent=1.55in\hangafter=1
-  \makebox[1.55in][l]{\textbf{\small #1}}{\small #2}\par}
+  \vspace{1pt}\noindent\hangindent=1.3in\hangafter=1
+  \makebox[1.3in][l]{\textbf{\small #1}}{\small #2}\par}
 
 \begin{document}
 
@@ -87,22 +92,22 @@
 % ===== Experience =====
 \section{Experience}
 \role{Linedata \textbar{} Product Co-op}{Sep 2026 – Present}
-\sub{}{Boston, MA}
+\sub{Boston, MA}{}
 \begin{bullets}
-  \bi{Built a web-admin proof of concept for Linedata Longview, moving 13 legacy desktop screens to the web as embeddable micro-frontends (React, GraphQL, .NET) so admin work can happen alongside Linedata’s web products.}
+  \bi{Built a web-admin proof of concept for Linedata Longview, moving 13 legacy desktop screens to the web as embeddable \mbox{micro-frontends} (React, GraphQL, .NET) so admin work can happen alongside Linedata’s web products.}
   \bi{Grouped all 122 admin screens into 3 reusable UI patterns, giving the full migration a repeatable path at about 2–3 days per screen with AI-assisted development (Kiro).}
   \bi{Uncovered undocumented legacy business rules through live-database testing, preventing silent data corruption; merged with 140/140 tests passing.}
 \end{bullets}
 
 \role{FITA Academy - Software Engineer}{Jan. 2025 - Aug. 2025}
-\sub{}{Chennai, India}
+\sub{Chennai, India}{}
 \begin{bullets}
   \bi{Shipped a full-stack student management platform from the ground up, owning system design, backend, and deployment across enrollment, attendance, and reporting.}
   \bi{Built 20+ secure REST APIs with Java Spring Boot, JWT, RBAC, and MongoDB, plus reusable React, Next.js, and Angular components that cut duplicate work and sped up delivery.}
 \end{bullets}
 
 \role{Aican Automate - Machine Learning Engineer}{Jan. 2023 - Mar. 2023}
-\sub{}{Chennai, India}
+\sub{Chennai, India}{}
 \begin{bullets}
   \bi{Built an NLP support-ticket classifier (TF-IDF, Logistic Regression, Random Forest) at 87\% precision, and containerized training with Docker so 5+ engineers could retrain and deploy reproducibly.}
 \end{bullets}
